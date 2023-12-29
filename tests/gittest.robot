@@ -9,7 +9,7 @@ Suite Setup                Open Browser                about:blank              
 Suite Teardown             Close All Browsers
 
 *** Variables ***
-${FILE}                   FUNDAMENTALS .pdf
+${FILE}                    FUNDAMENTALS .pdf
 
 *** Test Cases ***
 
@@ -17,14 +17,14 @@ ${FILE}                   FUNDAMENTALS .pdf
     Run Keyword            Home
     LaunchApp              Sales
     clicktext              Account
-    clicktext             testing
-    Verifytext            Notes & Attachments
+    clicktext              testing
+    Verifytext             Notes & Attachments
     clicktext              Notes & Attachments
     ${FILE_PATH}           Set Variable                ${CURDIR}/files/${FILE}
     Log                    ${FILE_PATH}                console=true
-    clicktext             Upload Files                partial_match=False
+    clicktext              Upload Files                partial_match=False
     QVision.DoubleClick    tests
     QVision.DoubleClick    files
-    QVision.ClickText     FUNDAMENTALS .pdf
+    QVision.ClickText      FUNDAMENTALS .pdf
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
