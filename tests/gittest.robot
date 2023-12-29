@@ -9,8 +9,7 @@ Suite Setup                Open Browser                about:blank              
 Suite Teardown             Close All Browsers
 
 *** Variables ***
-${FILE}                    my_data.txt
-
+${FILE}                   FUNDAMENTALS .pdf
 
 *** Test Cases ***
 
@@ -26,6 +25,6 @@ ${FILE}                    my_data.txt
     clicktext             Upload Files                partial_match=False
     QVision.DoubleClick    tests
     QVision.DoubleClick    files
-    QVision.ClickText      my_data.txt
+    QVision.ClickText     FUNDAMENTALS .pdf
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
