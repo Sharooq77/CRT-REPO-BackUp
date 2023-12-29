@@ -17,7 +17,7 @@ ${FILE}                   FUNDAMENTALS .pdf
     Run Keyword            Home
     LaunchApp              Sales
     clicktext              Account
-    clicktext             dellCompany
+    clicktext             testing
     Verifytext            Notes & Attachments
     clicktext              Notes & Attachments
     ${FILE_PATH}           Set Variable                ${CURDIR}/files/${FILE}
