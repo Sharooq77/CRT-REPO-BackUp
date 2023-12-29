@@ -17,7 +17,10 @@ ${FILE}                    Crt image.jpg
     Run Keyword            Home
     LaunchApp              Sales
     clicktext              Account
-    clicktext              testing
+    clicktext              New
+    TypeText              *Account Name            Crt Test
+    Picklist              Active                   yes
+    Picklist              SLA                      Gold
     Verifytext             Notes & Attachments
     clicktext              Notes & Attachments
     ${FILE_PATH}           Set Variable                ${CURDIR}/files/${FILE}
