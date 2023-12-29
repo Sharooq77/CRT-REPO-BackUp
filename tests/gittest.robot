@@ -29,7 +29,7 @@ ${FILE}                    Crt image.jpg
     clicktext              Upload Files                partial_match=False
     QVision.DoubleClick    tests
     QVision.DoubleClick    Suite
-    #QVision.DoubleClick    files
+    QVision.DoubleClick    files
     QVision.ClickText      Crtimage.jpg
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
