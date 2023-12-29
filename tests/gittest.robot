@@ -18,10 +18,10 @@ ${FILE}                    Crt image.jpg
     LaunchApp              Sales
     clicktext              Account
     clicktext              New
-    TypeText              *Account Name            Crt Test
-    Picklist              Active                  No
-    Picklist              SLA                      Gold
-    clicktext             Save
+    TypeText               *Account Name               Crt Test
+    Picklist               Active                      No
+    Picklist               SLA                         Gold
+    clicktext              Save                        partial_match=False
     Verifytext             Notes & Attachments
     clicktext              Notes & Attachments
     ${FILE_PATH}           Set Variable                ${CURDIR}/files/${FILE}
