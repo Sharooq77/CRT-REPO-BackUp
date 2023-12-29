@@ -19,7 +19,7 @@ ${FILE}                    Crt image.jpg
     clicktext              Account
     clicktext              New
     TypeText              *Account Name            Crt Test
-    Picklist              Active                   yes
+    Picklist              Active                  No
     Picklist              SLA                      Gold
     Verifytext             Notes & Attachments
     clicktext              Notes & Attachments
