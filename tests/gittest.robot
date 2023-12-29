@@ -9,7 +9,7 @@ Suite Setup                Open Browser                about:blank              
 Suite Teardown             Close All Browsers
 
 *** Variables ***
-${FILE}                    FUNDAMENTALS .pdf
+${FILE}                    Crt image.jpg
 
 *** Test Cases ***
 
@@ -26,6 +26,6 @@ ${FILE}                    FUNDAMENTALS .pdf
     QVision.DoubleClick    tests
     QVision.DoubleClick    Suite
     QVision.DoubleClick    files
-    QVision.ClickText      FUNDAMENTALS .pdf
+    QVision.ClickText      Crt image.jpg
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
