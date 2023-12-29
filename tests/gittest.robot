@@ -23,8 +23,8 @@ ${FILE}                    FUNDAMENTALS .pdf
     ${FILE_PATH}           Set Variable                ${CURDIR}/files/${FILE}
     Log                    ${FILE_PATH}                console=true
     clicktext              Upload Files                partial_match=False
-    QVision.DoubleClick    tests
     QVision.DoubleClick    files
+    QVision.DoubleClick    tests
     QVision.ClickText      FUNDAMENTALS .pdf
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
