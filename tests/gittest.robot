@@ -21,6 +21,7 @@ ${FILE}                    Crt image.jpg
     TypeText              *Account Name            Crt Test
     Picklist              Active                  No
     Picklist              SLA                      Gold
+    clicktext             Save
     Verifytext             Notes & Attachments
     clicktext              Notes & Attachments
     ${FILE_PATH}           Set Variable                ${CURDIR}/files/${FILE}
