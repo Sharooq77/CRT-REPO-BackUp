@@ -9,7 +9,7 @@ Suite Setup                Open Browser                about:blank              
 Suite Teardown             Close All Browsers
 
 *** Variables ***
-${FILE}                   window.xlsx
+${FILE}                  tickets.csv
 *** Test Cases ***
 
     [Tags]                 Salesforce
@@ -29,6 +29,6 @@ ${FILE}                   window.xlsx
     QVision.DoubleClick    tests
     QVision.DoubleClick    Suite
     QVision.DoubleClick    files
-    QVision.ClickText      window.xlsx
+    QVision.ClickText      tickets.csv
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
