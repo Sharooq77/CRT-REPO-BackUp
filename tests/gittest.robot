@@ -9,8 +9,7 @@ Suite Setup                Open Browser                about:blank              
 Suite Teardown             Close All Browsers
 
 *** Variables ***
-${FILE}                    Crt image.jpg
-
+${FILE}                   window.xlsx
 *** Test Cases ***
 
     [Tags]                 Salesforce
@@ -30,6 +29,6 @@ ${FILE}                    Crt image.jpg
     QVision.DoubleClick    tests
     QVision.DoubleClick    Suite
     QVision.DoubleClick    files
-    QVision.ClickText      Crtimage.jpg
+    QVision.ClickText      window.xlsx
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
