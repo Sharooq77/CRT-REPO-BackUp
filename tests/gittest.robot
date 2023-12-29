@@ -25,6 +25,7 @@ ${FILE}                    FUNDAMENTALS .pdf
     clicktext              Upload Files                partial_match=False
     QVision.DoubleClick    tests
     QVision.DoubleClick    Suite
+     QVision.DoubleClick   files
     QVision.ClickText      FUNDAMENTALS .pdf
     QVision.ClickText      Open                        anchor=Cancel
     clicktext              Done
