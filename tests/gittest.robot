@@ -9,7 +9,7 @@ Suite Setup                Open Browser                about:blank              
 Suite Teardown             Close All Browsers
 
 *** Variables ***
-${FILE}                  tickets.csv
+${FILE}                    tickets.csv
 *** Test Cases ***
 
     [Tags]                 Salesforce
