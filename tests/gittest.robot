@@ -89,7 +89,9 @@ Entering A Lead With Data
     ClickText          Save
     # ClickText        Save
     Clicktext          PDF
-    UsePdf             QuotePDF
+    UsePdf    yourfile.pdf
+    ${pdf_content}    GetPdfText
+    UsePdf             QuotePDF.PDF
     SwitchBrowser      On
     ${text}            GetPdfText                  #returns whole content
     VerifyText         ${text}
