@@ -1,5 +1,5 @@
 *** Settings ***
-Resource               ../Resources/Common.robot
+Resource               ../resources/common.robot
 Library                QWeb
 Suite Setup            Setup Browser
 Suite Teardown         End suite
