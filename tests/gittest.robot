@@ -49,5 +49,6 @@ Creating A User With Data
     TypeText                    Reason for requesting payment                         testing
     TypeText                    Enter USD amount of COVID-related payment or enter 0    0
     ClickText                   Start CDR                   anchor=as Draft
+    UseModal                    On
     ClickText                   Start CDR                   anchor=Cancel
 
