@@ -34,7 +34,7 @@ Creating A User With Data
     ClickText                   2017 ($1782.03)
     Click Text                  Next
     UseModal                    On
-    #ScrollText                  amountToDisburseInput       partial_match=Flase
+    #ScrollText                 amountToDisburseInput       partial_match=Flase
     TypeText                    amountToDisburseInput       10.00
     ClickText                   Next
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
@@ -42,15 +42,12 @@ Creating A User With Data
     ClickElement                xpath=/html[1]/body[1]/div[4]/md-dialog[1]/md-dialog-content[1]/div[1]/button[1]
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         tests
+    QVision.DoubleClick         files
     QVision.ClickText           FUNDAMENTALS .pdf
     QVision.ClickText           Open                        anchor=Cancel
-    clicktext                   Done
-    ClickText                   link                        index=3
-    VerifyText                  select a file*
-    ClickText                   link
     ClickText                   Upload
-    TypeText                    Reason for requesting payment                           testing
+    TypeText                    Reason for requesting payment                         testing
     TypeText                    Enter USD amount of COVID-related payment or enter 0    0
     ClickText                   Start CDR                   anchor=as Draft
-    ClickText                   Start CDR                   anchor=1
+    ClickText                   Start CDR                   anchor=Cancel
 
