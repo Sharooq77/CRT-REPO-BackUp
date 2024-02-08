@@ -34,8 +34,8 @@ Creating A User With Data
     ClickText                   2017 ($1782.03)
     Click Text                  Next
     UseModal                    On
-    #ScrollText                 amountToDisburseInput       partial_match=Flase
-    TypeText                    amountToDisburseInput       10.00
+    ScrollText                 Amount to Disburse for this request in USD      partial_match=Flase
+    TypeText                     Amount to Disburse for this request in USD        100.00
     ClickText                   Next
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     ClickElement                xpath=/html[1]/body[1]/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/wizard-documents[1]/div[1]/div[1]/div[3]/div[1]/file-button[1]/button[1]
