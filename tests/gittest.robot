@@ -54,21 +54,3 @@ Creating A User With Data
     ClickText                   Start CDR                   anchor=as Draft
     ClickText                   Start CDR                   anchor=1
 
-
-*** Test Cases ***
-
-    [Tags]                      Salesforce
-    Run Keyword                 Home
-    LaunchApp                   Sales
-    clicktext                   Account
-    clicktext                   dellCompany
-    Verifytext                  Notes & Attachments
-    clicktext                   Notes & Attachments
-    ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE} ##THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANATHER SUIT USE EXADIR
-    Log                         ${FILE_PATH}                console=true
-    clicktext                   Upload Files                partial_match=False
-    QVision.DoubleClick         Test
-    QVision.DoubleClick         files
-    QVision.ClickText           my_data.txt
-    QVision.ClickText           Open                        anchor=Cancel
-    clicktext                   Done
