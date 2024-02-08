@@ -51,30 +51,16 @@ Creating A User With Data
     ClickText                   Start CDR                   anchor=as Draft
     UseModal                    On
     ClickText                   START CDR                   recognition_mode=vision
-    UseTable    Country
-    ClickCell    r11c2
-    ClickText    1.2 Senior Country Manager    anchor=Created on
-    TypeText    Enter a comment    approved
-    ClickText    1.2 Senior Country Manager    anchor=Created on
-    ClickText    1.2 Senior Country Manager    anchor=*
-    ClickText    1.2 Senior Country Manager    anchor=*
-    TypeText    Enter a comment    approved
-    ClickText    Show Less    anchor=Country
-    ClickText    Show More
-    ClickText    Show Less    anchor=Country
-    ClickText    Cancel
-    ClickCell    r11c2
-    ClickText    Show Less    anchor=Country
-    ClickText    1.2 Senior Country Manager    anchor=Created on
-    TypeText    Enter a comment    approved
-    ClickText    1.2 Senior Country Manager    anchor=Created on
-    ClickText    1.2 Senior Country Manager    anchor=Created on
-    TypeText    Enter a comment    approved
-    ClickText    1.2 Senior Country Manager    anchor=Created on
-    ClickText    1.2 Senior Country Manager    anchor=*
-    TypeText    Enter a comment    approved
-    ClickText    1.2 Senior Country Manager    anchor=*
-    ClickText    1.2 Senior Country Manager    anchor=*
-    TypeText    Enter a comment    approved
-    ClickText    APPROVE    anchor=*
-    ClickText    APPROVE    anchor=*
+    UseTable                    Country
+    ClickText                   Cancel
+    ClickCell                   r11c2
+    ClickText                   Show Less                   anchor=Country
+    ClickText                   1.2 Senior Country Manager                             anchor=Created on
+    TypeText                    Enter a comment             approved
+    ClickText                   1.2 Senior Country Manager                             anchor=Created on
+    TypeText                    Enter a comment             approved
+    ClickText                   1.2 Senior Country Manager                             anchor=Created on
+    TypeText                    Enter a comment             approved
+    ClickText                   1.2 Senior Country Manager                             anchor=Created on
+    TypeText                    Enter a comment             approved
+    ClickText                   APPROVE                   
