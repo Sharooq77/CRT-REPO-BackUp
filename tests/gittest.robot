@@ -34,7 +34,7 @@ Creating A User With Data
     ClickText                   2017 ($1782.03)
     Click Text                  Next
     UseModal                    On
-    ScrollText                 Amount to Disburse for this request in USD      partial_match=Flase
+    ScrollText                 Amount to Disburse for this request in USD*     partial_match=Flase
     TypeText                     Amount to Disburse for this request in USD        100.00
     ClickText                   Next
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
