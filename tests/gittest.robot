@@ -42,7 +42,7 @@ Creating A User With Data
     ClickElement                xpath=/html[1]/body[1]/div[4]/md-dialog[1]/md-dialog-content[1]/div[1]/button[1]
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         tests
-    QVision.DoubleClick         files
+    QVision.DoubleClick         suite
     QVision.ClickText           FUNDAMENTALS .pdf
     QVision.ClickText           Open                        anchor=Cancel
     ClickText                   Upload
