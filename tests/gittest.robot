@@ -46,9 +46,9 @@ Creating A User With Data
     QVision.ClickText           FUNDAMENTALS .pdf
     QVision.ClickText           Open                        anchor=Cancel
     ClickText                   Upload
-    TypeText                    Reason for requesting payment                         testing
+    TypeText                    Reason for requesting payment                          testing
     TypeText                    Enter USD amount of COVID-related payment or enter 0    0
     ClickText                   Start CDR                   anchor=as Draft
     UseModal                    On
-    ClickText                   Start CDR                   anchor=Cancel
-
+    ClickText                   START CDR                   recognition_mode=vision
+    
