@@ -35,9 +35,6 @@ Creating A User With Data
     ClickText                   ${Key}
     ClickElement                ${ProgrammeYear}
     ClickText                   ${Year}
-     ClickText                   ${Year}
-    UseTable                    Program
-    ClickCell                   2017 ($1782.03)
     Click Text                  Next
     UseModal                    On
     # ScrollText                Amount to Disburse for this request in USD*             recognition_mode=vision
@@ -62,8 +59,11 @@ Creating A User With Data
     UseModal                    On
     ClickText                   START CDR                   recognition_mode=vision
     Sleep                       2
-    ClickText                   CDR-2024-803
+    RefreshPage
+    ClickText                   CDR-2024-805
     ClickText                   Show Less                   anchor=Country
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
     TypeText                    Enter a comment             ${comment}
     ClickText                   APPROVE
+    VerifyText                    Bolivia                   anchor=2
+    VerifyAll                     Testing,USD 50,Government (MoH),BOL-HSS-2-MOH 
