@@ -7,7 +7,7 @@ Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
 # *** Variables ***
-# ${FILE}                         FUNDAMENTALS .pdf
+# ${FILE}                       FUNDAMENTALS .pdf
 
 
 *** Test Cases ***
@@ -26,7 +26,7 @@ Creating And Verify to CDR request
     Click Text                  Dashboard
     Click Text                  add
     UseModal                    On
-#Verify to Create CDR with Recipient(Vendor) type as Government(MOH)
+    #Verify to Create CDR with Recipient(Vendor) type as Government(MOH)
     ClickElement                ${Country}
     ClickText                   ${Name}
     ClickElement                ${RecipientVendor}
@@ -38,6 +38,7 @@ Creating And Verify to CDR request
     ClickText                   ${Year}
     Click Text                  Next
     UseModal                    On
+    Swipe Down
     # ScrollText                Amount to Disburse for this request in USD*             recognition_mode=vision
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
@@ -45,7 +46,7 @@ Creating And Verify to CDR request
     ClickElement                ${DecisionLetter}
     ClickElement                ${SelectFile}
     Sleep                       2
-#'Decision Letter'should be able to upload As a required document
+    #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         suite                       anchor=ui-recorder
     QVision.DoubleClick         files
@@ -53,7 +54,7 @@ Creating And Verify to CDR request
     QVision.ClickText           Open                        anchor=Cancel
     ClickText                   Upload
     sleep                       2
-#Enter the required text in the "Reason for requesting payment
+    #Enter the required text in the "Reason for requesting payment
     ScrollText                  Reason for requesting payment
     TypeText                    Reason for requesting payment                           ${Request_payment}
     TypeText                    Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
@@ -63,11 +64,19 @@ Creating And Verify to CDR request
     ClickText                   START CDR                   recognition_mode=vision
     Sleep                       2
     RefreshPage
-#Verify the SCM user should able to approve the CDR request   
+    #Verify the SCM user should able to approve the CDR request
     ClickText                   CDR-2024-805
     ClickText                   Show Less                   anchor=Country
+    Scroll To                   CDR process steps
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
     TypeText                    Enter a comment             ${comment}
     ClickText                   APPROVE
     VerifyText                  Bolivia                     anchor=2
     VerifyAll                   Testing,USD 50,Government (MoH),BOL-HSS-2-MOH,Open
+
+    Use List                    Show More
+    # Scroll to the specific item in the list
+
+    # Optionally, click the item after finding it
+    Click Text                  Show More
+    Swipe Down
