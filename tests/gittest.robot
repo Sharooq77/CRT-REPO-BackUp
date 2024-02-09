@@ -4,6 +4,7 @@ Resource                   ../resources/variable.robot
 Library                    QWeb
 Library                    QVision
 Library                    QForce
+Library                    DataDriver                test
 Suite Setup                Setup Browser
 Suite Teardown             End suite
 
