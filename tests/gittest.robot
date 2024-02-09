@@ -29,6 +29,7 @@ Creating A User With Data
     ClickText                   Bolivia
     ClickElement                ${RecipientVendor}
     ClickText                   Government (MoH)
+    Sleep                       2
     ClickElement                ${BusinessKey}
     ClickText                   BOL-HSS-2-MOH ($1782.03)
     ClickElement                ${ProgrammeYear}
@@ -48,6 +49,7 @@ Creating A User With Data
     QVision.ClickText           FUNDAMENTALS .pdf
     QVision.ClickText           Open                        anchor=Cancel
     ClickText                   Upload
+    sleep                       2
     ScrollText                  Reason for requesting payment
     TypeText                    Reason for requesting payment                          testing
     TypeText                    Enter USD amount of COVID-related payment or enter 0    0
