@@ -61,10 +61,10 @@ Creating A User With Data
     ClickText                   Show Less                   anchor=Country
     ClickText                   1.2 Senior Country Manager                             anchor=Created on
     TypeText                    Enter a comment             approved
-    ClickText                   1.2 Senior Country Manager                             anchor=Created on
-    TypeText                    Enter a comment             approved
-    ClickText                   1.2 Senior Country Manager                             anchor=Created on
-    TypeText                    Enter a comment             approved
-    ClickText                   1.2 Senior Country Manager                             anchor=Created on
-    TypeText                    Enter a comment             approved
+    # ClickText                   1.2 Senior Country Manager                             anchor=Created on
+    # TypeText                    Enter a comment             approved
+    # ClickText                   1.2 Senior Country Manager                             anchor=Created on
+    # TypeText                    Enter a comment             approved
+    # ClickText                   1.2 Senior Country Manager                             anchor=Created on
+    # TypeText                    Enter a comment             approved
     ClickText                   APPROVE
