@@ -1,10 +1,8 @@
 *** Settings ***
 Resource                   ../resources/common.robot
 Resource                   ../resources/variable.robot
-Library                    QWeb
 Library                    QVision
-Library                    QForce
-Library                    DataDriver                test
+Library                    DataDriver                  reader_class=TestDataApi    name=gavi.xlsx
 Suite Setup                Setup Browser
 Suite Teardown             End suite
 
@@ -39,7 +37,7 @@ Creating A User With Data
     ClickText              2017 ($1782.03)
     Click Text             Next
     UseModal               On
-    # ScrollText           Amount to Disburse for this request in USD*            recognition_mode=vision
+    # ScrollText           Amount to Disburse for this request in USD*             recognition_mode=vision
     TypeText               amountToDisburseInput       100.00
     ClickText              Next
     ${FILE_PATH}           Set Variable                ${CURDIR}/Data/${FILE}
@@ -54,7 +52,7 @@ Creating A User With Data
     ClickText              Upload
     sleep                  2
     ScrollText             Reason for requesting payment
-    TypeText               Reason for requesting payment                          testing
+    TypeText               Reason for requesting payment                           testing
     TypeText               Enter USD amount of COVID-related payment or enter 0    50
     ClickText              START CDR                   anchor=as Draft
     Sleep                  2
@@ -63,6 +61,6 @@ Creating A User With Data
     Sleep                  2
     ClickText              CDR-2024-803
     ClickText              Show Less                   anchor=Country
-    ClickText              1.2 Senior Country Manager                             anchor=Created on
+    ClickText              1.2 Senior Country Manager                              anchor=Created on
     TypeText               Enter a comment             approved
     ClickText              APPROVE
