@@ -25,7 +25,7 @@ Creating A User With Data
     Click Text                  GO To CDR
     Click Text                  Dashboard
     Click Text                  add
-    ClickText                   ${Country}
+    ClickElement                   ${Country}
     ClickText                   Bolivia
     ClickElement                ${RecipientVendor}
     ClickText                   Government (MoH)
