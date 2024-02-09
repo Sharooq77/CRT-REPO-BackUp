@@ -21,7 +21,7 @@ Creating A User With Data
     Click Text             Disbursements
     Drop Down              View:                       All
     Click Text             Go
-    Click Text             CDR-2022-009
+    Click Text             CDR-2022-001
     Click Text             GO To CDR
     sleep                  2
     Click Text             Dashboard
@@ -60,15 +60,8 @@ Creating A User With Data
     UseModal               On
     ClickText              START CDR                   recognition_mode=vision
     Sleep                  2
-    ClickText              CDR-2024-796
+    ClickText              CDR-2024-803
     ClickText              Show Less                   anchor=Country
     ClickText              1.2 Senior Country Manager                             anchor=Created on
     TypeText               Enter a comment             approved
-    # ClickText            1.2 Senior Country Manager                             anchor=Created on
-    # TypeText             Enter a comment             approved
-    # ClickText            1.2 Senior Country Manager                             anchor=Created on
-    # TypeText             Enter a comment             approved
-    # ClickText            1.2 Senior Country Manager                             anchor=Created on
-    # TypeText             Enter a comment             approved
-    Sleep                  2
     ClickText              APPROVE
