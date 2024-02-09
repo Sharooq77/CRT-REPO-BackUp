@@ -69,4 +69,5 @@ Creating A User With Data
     # TypeText             Enter a comment             approved
     # ClickText            1.2 Senior Country Manager                             anchor=Created on
     # TypeText             Enter a comment             approved
+    Sleep                  2
     ClickText              APPROVE
