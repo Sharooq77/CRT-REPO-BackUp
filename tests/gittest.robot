@@ -20,25 +20,25 @@ Creating A User With Data
     Click Text             Disbursements
     Drop Down              View:                       All
     Click Text             Go
-    Click Text             CDR-2022-001
+    Click Text             ${Disbursement_Number}
     Click Text             GO To CDR
     sleep                  2
     Click Text             Dashboard
     Click Text             add
     UseModal               On
     ClickElement           ${Country}
-    ClickText              Bolivia
+    ClickText              ${Name}
     ClickElement           ${RecipientVendor}
-    ClickText              Government (MoH)
+    ClickText              ${Vender}
     Sleep                  2
     ClickElement           ${BusinessKey}
-    ClickText              BOL-HSS-2-MOH ($1782.03)
+    ClickText              ${Key}
     ClickElement           ${ProgrammeYear}
-    ClickText              2017 ($1782.03)
+    ClickText              ${Year}
     Click Text             Next
     UseModal               On
     # ScrollText           Amount to Disburse for this request in USD*             recognition_mode=vision
-    TypeText               amountToDisburseInput       100.00
+    TypeText               amountToDisburseInput       ${Amount}
     ClickText              Next
     ${FILE_PATH}           Set Variable                ${CURDIR}/Data/${FILE}
     ClickElement           ${DecisionLetter}
@@ -52,8 +52,8 @@ Creating A User With Data
     ClickText              Upload
     sleep                  2
     ScrollText             Reason for requesting payment
-    TypeText               Reason for requesting payment                           testing
-    TypeText               Enter USD amount of COVID-related payment or enter 0    50
+    TypeText               Reason for requesting payment                           ${Request_payment}
+    TypeText               Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     ClickText              START CDR                   anchor=as Draft
     Sleep                  2
     UseModal               On
@@ -62,5 +62,5 @@ Creating A User With Data
     ClickText              CDR-2024-803
     ClickText              Show Less                   anchor=Country
     ClickText              1.2 Senior Country Manager                              anchor=Created on
-    TypeText               Enter a comment             approved
+    TypeText               Enter a comment             ${comment}
     ClickText              APPROVE
