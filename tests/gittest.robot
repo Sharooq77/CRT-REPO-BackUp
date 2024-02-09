@@ -23,8 +23,10 @@ Creating A User With Data
     Click Text                  Go
     Click Text                  CDR-2022-009
     Click Text                  GO To CDR
+    sleep                       2
     Click Text                  Dashboard
     Click Text                  add
+    UseModal                    On
     ClickElement                ${Country}
     ClickText                   Bolivia
     ClickElement                ${RecipientVendor}
