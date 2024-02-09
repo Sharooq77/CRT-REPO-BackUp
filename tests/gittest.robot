@@ -7,7 +7,8 @@ Library                    QForce
 Suite Setup                Setup Browser
 Suite Teardown             End suite
 
-
+*** Variables ***
+${FILE}                    FUNDAMENTALS .pdf
 
 
 *** Test Cases ***
