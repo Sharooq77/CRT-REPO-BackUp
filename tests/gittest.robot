@@ -18,14 +18,14 @@ Creating And Verify to CDR request
     Click Text                  Disbursements
     Drop Down                   View:                       All
     Click Text                  Go
-#open existing CDR Record 
+    #open existing CDR Record
     Click Text                  ${Disbursement_Number}
     Click Text                  GO To CDR
     sleep                       2
     Click Text                  Dashboard
     Click Text                  add
     UseModal                    On
-#Verify to Create CDR with Recipient(Vendor) type as Government(MOH)
+    #Verify to Create CDR with Recipient(Vendor) type as Government(MOH)
     ClickElement                ${Country}
     ClickText                   ${Name}
     ClickElement                ${RecipientVendor}
@@ -40,12 +40,12 @@ Creating And Verify to CDR request
     Swipe Down
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
-#THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
+    #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     ClickElement                ${DecisionLetter}
     ClickElement                ${SelectFile}
     Sleep                       2
-#'Decision Letter'should be able to upload As a required document
+    #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         suite                       anchor=ui-recorder
     QVision.DoubleClick         files
@@ -53,7 +53,7 @@ Creating And Verify to CDR request
     QVision.ClickText           Open                        anchor=Cancel
     ClickText                   Upload
     sleep                       2
-#Enter the required text in the "Reason for requesting payment
+    #Enter the required text in the "Reason for requesting payment
     ScrollText                  Reason for requesting payment
     TypeText                    Reason for requesting payment                           ${Request_payment}
     TypeText                    Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
@@ -63,20 +63,20 @@ Creating And Verify to CDR request
     ClickText                   START CDR                   recognition_mode=vision
     Sleep                       2
     RefreshPage
-#Verify the SCM user should able to approve the CDR request
+    #Verify the SCM user should able to approve the CDR request
     ClickText                   CDR-2024-814
     VerifyText                  Sudan                       anchor=2
     VerifyAll                   Testing,USD 11,Government (MoH),SDN-HSS-3-MOH
     ClickText                   Show Less                   anchor=Country
     SwipeDown                   1
-#Verify the SCM user should able to approve the CDR request  
+    #Verify the SCM user should able to approve the CDR request
+    VerifyText                  1.2 Senior Country Manager                              anchor=Created on
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
-    ScrollText                  Assigned
-    sleep                       1
+    ScrollText                  Assigned                                                delay=2
     TypeText                    Enter a comment             ${comment}
-    ClickText                   APPROVE
+    # ClickText                 APPROVE
     ScrollText                  Regional Head
-#Verify the Regional Head user should able to approve the CDR request   
+    #Verify the Regional Head user should able to approve the CDR request
     ClickText                   2.1 Regional Head
     ScrollText                  Assigned
     VerifyAll                   Decision,Waiting for Decision
@@ -84,19 +84,19 @@ Creating And Verify to CDR request
 
 *** Test Cases ***
 Verify Email Was Successfully Sent
- 
-    [Tags]              EmailVerification
+
+    [Tags]                      EmailVerification
     # Authenticate to Salesforce (replace with your actual credentials and details)
-    Authenticate        client_id=your_client_id    client_secret=your_client_secret                        username=your_username    password=your_password    sandbox=True
+    Authenticate                client_id=your_client_id    client_secret=your_client_secret                      username=your_username    password=your_password    sandbox=True
     # Define the SOQL query to retrieve the EmailMessage record of interest. Adjust the WHERE clause as needed.
-    ${query}=           Set Variable                SELECT Id, Status FROM EmailMessage WHERE Subject='testing' AND Status='Sent' AND DAY_ONLY(MessageDate) = TODAY ORDER BY MessageDate DESC LIMIT 1
+    ${query}=                   Set Variable                SELECT Id, Status FROM EmailMessage WHERE Subject='testing' AND Status='Sent' AND DAY_ONLY(MessageDate) = TODAY ORDER BY MessageDate DESC LIMIT 1
     # Execute the SOQL query
-    ${results}=         Query Records               ${query}
-    Log                 ${results}
+    ${results}=                 Query Records               ${query}
+    Log                         ${results}
     # Verify that the query returned a result and that the Status is 'Sent'
-    ${record_count}=    Get Length                  ${results}
-    Should Be True      ${record_count} > 0         msg=Email with specified subject was not successfully sent.
-    
-    # ${email_query}=             Set Variable                SELECT Id, Name, Subject, FromAddress, FromName, MessageDate, Status, ToAddress FROM EmailMessage
-    # ${email_results}=           Query Records               ${email_query}
-    # Log                         ${email_results}
+    ${record_count}=            Get Length                  ${results}
+    Should Be True              ${record_count} > 0         msg=Email with specified subject was not successfully sent.
+
+    # ${email_query}=           Set Variable                SELECT Id, Name, Subject, FromAddress, FromName, MessageDate, Status, ToAddress FROM EmailMessage
+    # ${email_results}=         Query Records               ${email_query}
+    # Log                       ${email_results}
