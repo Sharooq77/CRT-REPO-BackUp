@@ -18,14 +18,14 @@ Creating And Verify to CDR request
     Click Text                  Disbursements
     Drop Down                   View:                       All
     Click Text                  Go
-    #open existing CDR Record
+#open existing CDR Record
     Click Text                  ${Disbursement_Number}
     Click Text                  GO To CDR
     sleep                       2
     Click Text                  Dashboard
     Click Text                  add
     UseModal                    On
-    #Verify to Create CDR with Recipient(Vendor) type as Government(MOH)
+#Verify to Create CDR with Recipient(Vendor) type as Government(MOH)
     ClickElement                ${Country}
     ClickText                   ${Name}
     ClickElement                ${RecipientVendor}
@@ -40,12 +40,12 @@ Creating And Verify to CDR request
     Swipe Down
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
-    #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
+#THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     ClickElement                ${DecisionLetter}
     ClickElement                ${SelectFile}
     Sleep                       2
-    #'Decision Letter'should be able to upload As a required document
+#'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         suite                       anchor=ui-recorder
     QVision.DoubleClick         files
@@ -53,7 +53,7 @@ Creating And Verify to CDR request
     QVision.ClickText           Open                        anchor=Cancel
     ClickText                   Upload
     sleep                       2
-    #Enter the required text in the "Reason for requesting payment
+#Enter the required text in the "Reason for requesting payment
     ScrollText                  Reason for requesting payment
     TypeText                    Reason for requesting payment                           ${Request_payment}
     TypeText                    Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
@@ -63,26 +63,21 @@ Creating And Verify to CDR request
     ClickText                   START CDR                   recognition_mode=vision
     Sleep                       2
     RefreshPage
-    #Verify the SCM user should able to approve the CDR request
+#Verify the SCM user should able to approve the CDR request
     ClickText                   CDR-2024-814
     VerifyText                  Sudan                       anchor=2
     VerifyAll                   SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
     ClickText                   Show Less                   anchor=Country
-    SwipeDown                   1
-    #Verify the SCM user should able to approve the CDR request
-    #ScrollText                 1.2 Senior Country Manager                              anchor=Created on d       delay=2
-    ClickText                   1.2 Senior Country Manager                              anchor=Created on
-    #ScrollText                 Assigned                    delay=2
-    sleep                       2
-    SwipeDown
+    ScrollText                  1.2 Senior Country Manager                              anchor=Created on
     TypeText                    Enter a comment             ${comment}
-    # ClickText                 APPROVE
-    # ScrollText                Regional Head
-    # #Verify the Regional Head user should able to approve the CDR request
-    # ClickText                 2.1 Regional Head
-    # ScrollText                Assigned
-    # VerifyAll                 Decision,Waiting for Decision
-    # VerifyText                Waiting for Approver’s comment
+    ScrollText                  APPROVE
+    ClickText                   APPROVE
+#Verify the Regional Head user should able to approve the CDR request
+    ScrollText                  Regional Head
+    ClickText                   2.1 Regional Head
+    ScrollText                  Assigned
+    VerifyAll                   Decision,Waiting for Decision
+    VerifyText                  Waiting for Approver’s comment
 
 *** Test Cases ***
 Verify Email Was Successfully Sent
