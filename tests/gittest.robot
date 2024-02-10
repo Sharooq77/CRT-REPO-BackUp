@@ -65,17 +65,17 @@ Creating And Verify to CDR request
     Sleep                       2
     RefreshPage
     #Verify the SCM user should able to approve the CDR request
-    ClickText                   CDR-2024-805
+    ClickText                   CDR-2024-813
     ClickText                   Show Less                   anchor=Country
     Scroll To                   CDR process steps
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
     TypeText                    Enter a comment             ${comment}
     ClickText                   APPROVE
-    VerifyText                  Bolivia                     anchor=2
-    VerifyAll                   Testing,USD 50,Government (MoH),BOL-HSS-2-MOH,Open
+    VerifyText                  Sudan                       anchor=2
+    VerifyAll                   Testing,USD 11,Government (MoH),SDN-HSS-3-MOH
 *** Test Cases ***
 Creating 
     [Tags]                      mail
-    ${email_query}=             Set Variable                SELECT Id, Name, Subject, FromAddress, FromName, MessageDate, Status, ToAddress FROM EmailMessage 
+    ${email_query}=             Set Variable                SELECT Id, Name, Subject, FromAddress, FromName, MessageDate, Status, ToAddress FROM EmailMessage
     ${email_results}=           Query Records               ${email_query}
     Log                         ${email_results}
