@@ -70,7 +70,7 @@ Creating And Verify to CDR request
     ClickText                   Show Less                   anchor=Country
     SwipeDown                   1
     #Verify the SCM user should able to approve the CDR request
-    VerifyText                  1.2 Senior Country Manager                              anchor=Created on
+    ScrollText                 1.2 Senior Country Manager                              anchor=Created on
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
     ScrollText                  Assigned                                                delay=2
     TypeText                    Enter a comment             ${comment}
