@@ -72,7 +72,8 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ScrollText                  1.2 Senior Country Manager                              anchor=Created on d       delay=2
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
-    ScrollText                  Assigned                    delay=2
+    #ScrollText                  Assigned                    delay=2
+    sleep                       3
     TypeText                    Enter a comment             ${comment}
     # ClickText                 APPROVE
     ScrollText                  Regional Head
