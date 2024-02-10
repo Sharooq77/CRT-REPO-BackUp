@@ -76,6 +76,6 @@ Creating And Verify to CDR request
 *** Test Cases ***
 Creating 
     [Tags]                      mail
-    ${email_query}=             Set Variable                SELECT Id, Name, Subject, FromAddress, FromName, MessageDate, Status, ToAddress FROM EmailMessage WHERE MessageDate = THIS_WEEK
+    ${email_query}=             Set Variable                SELECT Id, Name, Subject, FromAddress, FromName, MessageDate, Status, ToAddress FROM EmailMessage 
     ${email_results}=           Query Records               ${email_query}
     Log                         ${email_results}
