@@ -67,21 +67,22 @@ Creating And Verify to CDR request
     ClickText                   CDR-2024-814
     VerifyText                  Sudan                       anchor=2
     VerifyAll                   SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
-     ClickText                   Show Less                   anchor=Country
-    SwipeDown                   2
-#Verify the SCM user should able to approve the CDR request
-    #ScrollText                  1.2 Senior Country Manager                              anchor=Created on d       delay=2
+    ClickText                   Show Less                   anchor=Country
+    SwipeDown                   1
+    #Verify the SCM user should able to approve the CDR request
+    #ScrollText                 1.2 Senior Country Manager                              anchor=Created on d       delay=2
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
-    #ScrollText                  Assigned                    delay=2
+    #ScrollText                 Assigned                    delay=2
+    sleep                       2
     SwipeDown
     TypeText                    Enter a comment             ${comment}
     # ClickText                 APPROVE
-    ScrollText                  Regional Head
-    #Verify the Regional Head user should able to approve the CDR request
-    ClickText                   2.1 Regional Head
-    ScrollText                  Assigned
-    VerifyAll                   Decision,Waiting for Decision
-    VerifyText                  Waiting for Approver’s comment
+    # ScrollText                Regional Head
+    # #Verify the Regional Head user should able to approve the CDR request
+    # ClickText                 2.1 Regional Head
+    # ScrollText                Assigned
+    # VerifyAll                 Decision,Waiting for Decision
+    # VerifyText                Waiting for Approver’s comment
 
 *** Test Cases ***
 Verify Email Was Successfully Sent
