@@ -67,13 +67,13 @@ Creating And Verify to CDR request
     ClickText                   CDR-2024-814
     VerifyText                  Sudan                       anchor=2
     VerifyAll                   SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
-    # ClickText                   Show Less                   anchor=Country
-    SwipeDown                   3
+     ClickText                   Show Less                   anchor=Country
+    SwipeDown                   2
 #Verify the SCM user should able to approve the CDR request
     #ScrollText                  1.2 Senior Country Manager                              anchor=Created on d       delay=2
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
     #ScrollText                  Assigned                    delay=2
-    sleep                       3
+    SwipeDown
     TypeText                    Enter a comment             ${comment}
     # ClickText                 APPROVE
     ScrollText                  Regional Head
