@@ -67,10 +67,16 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ClickText                   CDR-2024-813
     ClickText                   Show Less                   anchor=Country
-    Scroll To                   CDR process steps
+    SwipeDown                   1
     ClickText                   1.2 Senior Country Manager                              anchor=Created on
+    ScrollText                  Assigned
     TypeText                    Enter a comment             ${comment}
     ClickText                   APPROVE
+    ClickText                   SHOW MORE                   anchor=CS Review & Approve
+    ScrollText                  Assigned
+    ClickText                   2.1 Regional Head
+    VerifyAll                 Decision                    Waiting for Decision
+    VerifyAll                   Approver's comment          Waiting for Approver's comment
     VerifyText                  Sudan                       anchor=2
     VerifyAll                   Testing,USD 11,Government (MoH),SDN-HSS-3-MOH
 *** Test Cases ***
