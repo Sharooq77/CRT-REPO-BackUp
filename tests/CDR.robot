@@ -64,7 +64,10 @@ Creating And Verify to CDR request
     Sleep                       2
     RefreshPage
     #Verify the SCM user should able to approve the CDR request
+    ClickText                   All requests
+    ClickText                   My request
     Click Text                  CDR-2024-815
+    Sleep                       2
     Verify Text                 Sudan                       anchor=2
     Verify All                  SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
     Click Text                  Show Less                   anchor=Country
