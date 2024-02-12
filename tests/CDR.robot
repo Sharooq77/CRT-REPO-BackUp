@@ -62,7 +62,6 @@ Creating And Verify to CDR request
     UseModal                    On
     Click Text                  START CDR                   recognition_mode=vision
     Sleep                       2
-    RefreshPage
     #Verify the SCM user should able to approve the CDR request
     ClickText                   All requests
     ClickText                   My request
