@@ -37,7 +37,7 @@ Creating And Verify to CDR request
     Click Text                  ${Year}
     Click Text                  Next
     Use Modal                   On
-    Swipe Down
+    Swipe Down                  1
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
