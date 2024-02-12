@@ -80,4 +80,17 @@ Creating And Verify to CDR request
     Scroll Text                 Assigned
     Verify All                  Decision,Waiting for Decision
     Verify Text                 Waiting for Approver’s comment
-
+    
+    
+*** Test Cases ***
+Browser open     https://outlook.office.com                              chrome
+    Type Text                   Email, phone, or Skype      ${username}
+    Click Text                  Next
+    Type Secret                 Enter password              ${password}
+    Click Text                  Sign in
+    Click Text                  Yes
+    
+    # Wait for the inbox to load and open the email containing the authentication code
+    Verify Text                 Inbox
+    TypeText                    Search                      Testing Gavi
+    Click Text                  Testing Gavi
