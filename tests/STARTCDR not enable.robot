@@ -56,6 +56,8 @@ Creating And Verify to CDR request
     #Enter the required text in the "Reason for requesting payment
     ScrollText                  Please ensure the following actions have been fulfilled before submitting the request:
     ScrollText                  Created by        T Mounika
+    ScrollText                  Recipient document guidelines
+
     Type Text                   Reason for requesting payment                           ${Request_payment}
     Type Text                   Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Click Text                  START CDR                   anchor=as Draft
