@@ -34,7 +34,7 @@ Creating And Verify to CDR request
     Click Element               ${BusinessKey}
     Click Text                  ${Key}
     ClickElement                ${ProgrammeYear}
-    Click Text                  ${Year}
+    Click Text                  ${Year}                     #
     Click Text                  Next
     Use Modal                   On
     Swipe Down                  1
