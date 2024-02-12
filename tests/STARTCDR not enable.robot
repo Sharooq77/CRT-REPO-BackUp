@@ -45,16 +45,17 @@ Creating And Verify to CDR request
     Click Element               ${DecisionLetter}
     Click Element               ${SelectFile}
     Sleep                       2
-    #'Decision Letter'should be able to upload As a required document
-    QVision.DoubleClick         Home                        anchor=desktop
-    QVision.DoubleClick         suite                       anchor=ui-recorder
-    QVision.DoubleClick         files
-    QVision.ClickText           FUNDAMENTALS .pdf
-    QVision.ClickText           Open                        anchor=Cancel
-    Click Text                  Upload
-    Sleep                       2
+    # #'Decision Letter'should be able to upload As a required document
+    # QVision.DoubleClick       Home                        anchor=desktop
+    # QVision.DoubleClick       suite                       anchor=ui-recorder
+    # QVision.DoubleClick       files
+    # QVision.ClickText         FUNDAMENTALS .pdf
+    # QVision.ClickText         Open                        anchor=Cancel
+    # Click Text                Upload
+    # Sleep                     2
     #Enter the required text in the "Reason for requesting payment
-    ScrollText                  Reason for requesting payment
+    ScrollText                  Please ensure the following actions have been fulfilled before submitting the request:
+    ScrollText                  Created by        T Mounika
     Type Text                   Reason for requesting payment                           ${Request_payment}
     Type Text                   Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Click Text                  START CDR                   anchor=as Draft
