@@ -65,7 +65,7 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ClickText                   All requests
     ClickText                   My request
-    Click Text                  CDR-2024-815
+    Click Text                  CDR-2024-816
     Sleep                       2
     Verify Text                 Sudan                       anchor=2
     Verify All                  SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
@@ -80,8 +80,8 @@ Creating And Verify to CDR request
     Scroll Text                 Assigned
     Verify All                  Decision,Waiting for Decision
     Verify Text                 Waiting for Approver’s comment
-    
-    
+
+
 *** Test Cases ***
 Browser open     https://outlook.office.com                              chrome
     Type Text                   Email, phone, or Skype      ${username}
@@ -89,7 +89,7 @@ Browser open     https://outlook.office.com                              chrome
     Type Secret                 Enter password              ${password}
     Click Text                  Sign in
     Click Text                  Yes
-    
+
     # Wait for the inbox to load and open the email containing the authentication code
     Verify Text                 Inbox
     TypeText                    Search                      Testing Gavi
