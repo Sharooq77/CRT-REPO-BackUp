@@ -47,3 +47,4 @@ Switch To Classic If Lightning
     ${is_lightning} =           Is Text                     Switch to Salesforce Classic                            timeout=2                   # Short timeout for quick check
     Run Keyword If              '${is_lightning}' == 'True'                             Click Text                  Switch to Salesforce Classic
 
+
