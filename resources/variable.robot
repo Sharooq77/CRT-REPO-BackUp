@@ -9,7 +9,7 @@ ${DecisionLetter}       xpath=/html[1]/body[1]/div[3]/md-dialog[1]/md-dialog-con
 ${SelectFile}           xpath=/html[1]/body[1]/div[4]/md-dialog[1]/md-dialog-content[1]/div[1]/button[1]
 ${FILE}                 FUNDAMENTALS .pdf
 ${STARTCDR}             xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/div[2]/div[1]/div[2]/button[3]/div[1]
-${Country}              xpath=//thead/tr[1]/th[1]
+${Country1}              xpath=//thead/tr[1]/th[1]
 ${Code}                 xpath=//thead/tr[1]/th[2]
 ${Businessreference}    xpath=//thead/tr[1]/th[3]
 ${Step}                 xpath=//thead/tr[1]/th[4]
