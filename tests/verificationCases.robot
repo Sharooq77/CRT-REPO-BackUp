@@ -36,8 +36,8 @@ Creating And Verify to CDR request
     Click Text                  ${Year}                     #
     Click Text                  Next
     Use Modal                   On
-    Swipe Down                  1
-    TypeText                    amountToDisburseInput       ${Amount}
+    ScrollText                  Created by                  T Mounika
+    TypeText                    amountToDisburseInput       1000001
     ClickText                   Next
     
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
