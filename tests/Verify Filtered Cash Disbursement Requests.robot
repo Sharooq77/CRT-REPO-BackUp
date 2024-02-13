@@ -32,12 +32,24 @@ Creating And Verify to CDR request
     verifyall                   Code,Business reference,Step,Task progress,Amount to disburse,Target date,Overall progress,Status
     VerifyText                  Status                      anchor=2
     ClickElement                ${Country1}
+    ClickElement                ${Country1}
+    ClickElement                ${Code}
     ClickElement                ${Code}
     ClickElement                ${Businessreference}
+    ClickElement                ${Businessreference}
+    ClickElement                ${Step}
     ClickElement                ${Step}
     ClickElement                ${amountToDisburse}
+    ClickElement                ${amountToDisburse}
+    ClickElement                ${Targetdate}
     ClickElement                ${Targetdate}
     ClickElement                ${Overallprogress}
+    ClickElement                ${Overallprogress}
     ClickElement                ${Status}
-
-
+    ClickElement                ${Status}
+    ClickText                   All request
+    ClickText                   My request
+    clicktext                   All countries
+    ClickText                   Afghanistan
+    ClickText                   CORE-EAP
+    ClickText                   CORE-ESA
