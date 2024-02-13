@@ -41,6 +41,9 @@ Creating And Verify to CDR request
     Swipe Down                  1
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
+
+
+
     #Enter the required text in the "Reason for requesting payment
     ScrollText                  Created by                  T Mounika
     ClickElement                ${STARTCDR}
@@ -60,6 +63,7 @@ Creating And Verify to CDR request
     Click Text                  Upload
     Waiting
     ClickElement                ${STARTCDR}
+    ScrollText                  GMR status report: where relevant
     VerifyText                  Reason for requesting payment
     Waiting
     Type Text                   Reason for requesting payment                           ${Request_payment}
