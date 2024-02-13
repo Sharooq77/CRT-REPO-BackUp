@@ -38,6 +38,8 @@ Creating And Verify to CDR request
     Use Modal                   On
     ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       1000001
+    VerifyText                  Is the intended funds recipient listed in latest GMR ?
+    VerifyElement               //body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[1]/md-input-container[1]/md-select[1]/md-select-value[1]/span[1]/div[1]
     ClickText                   Next
     
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
