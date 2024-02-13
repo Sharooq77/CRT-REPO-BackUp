@@ -35,8 +35,7 @@ Creating And Verify to CDR request
     ClickElement                ${Code}
     ClickElement                ${Businessreference}
     ClickElement                ${Step}
-    ClickElement                ${Task}
-    ClickElement                ${amount}
+    ClickElement                ${amountToDisburse}
     ClickElement                ${Targetdate}
     ClickElement                ${Overallprogress}
     ClickElement                ${Status}
