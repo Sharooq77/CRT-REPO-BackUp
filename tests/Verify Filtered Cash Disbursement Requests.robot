@@ -35,7 +35,7 @@ Creating And Verify to CDR request
     ClickElement                ${Code}
     ClickElement                ${Businessreference}
     ClickElement                ${Step}
-    ClickElement               xpath=//th[contains(text(),'Task progress')]
+    ClickElement                ${Task}
     ClickElement                ${amount}
     ClickElement                ${Targetdate}
     ClickElement                ${Overallprogress}
