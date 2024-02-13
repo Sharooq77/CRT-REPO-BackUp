@@ -39,7 +39,12 @@ Creating And Verify to CDR request
     Swipe Down                  1
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
-
+    
+    ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
+    Click Element               ${DecisionLetter}
+    Click Element               ${SelectFile}
+    Sleep                       2
+    
 
     #Enter the required text in the "Reason for requesting payment
     ScrollText                  Created by                  T Mounika
