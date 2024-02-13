@@ -23,3 +23,19 @@ Creating And Verify to CDR request
     Click Text                  GO To CDR
     Sleep                       2
     Click Text                  Dashboard
+    VerifyAll                   Type,All requests,All countries,All subsegments,Status,Draft,Open
+    VerifyText                  Cash disbursement requests                              anchor=2
+    SetConfig                   ShadowDOM                        True
+    UseModal                    On
+    VerifyAll                   Country,Code,Business reference,Step,Task progress,Amount to disburse,Target date,Overall progress,Status
+    ClickElement                xpath=//thead/tr[1]/th[1]
+    ClickElement                xpath=//thead/tr[1]/th[2]
+    ClickElement                xpath=//thead/tr[1]/th[3]
+    ClickElement                xpath=//thead/tr[1]/th[4]
+    ClickElement                xpath=//thead/tr[1]/th[5]
+    ClickElement                xpath=//thead/tr[1]/th[6]
+    ClickElement                xpath=//thead/tr[1]/th[7]
+    ClickElement                xpath=//thead/tr[1]/th[8]
+    ClickElement                xpath=//thead/tr[1]/th[9]
+
+
