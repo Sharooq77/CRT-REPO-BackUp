@@ -31,7 +31,7 @@ Creating And Verify to CDR request
     verifytext                  Code                        anchor=2
     verifyall                   Code,Business reference,Step,Task progress,Amount to disburse,Target date,Overall progress,Status
     VerifyText                  Status                      anchor=2
-    ClickElement                ${Country}
+    ClickElement                ${Country1}
     ClickElement                ${Code}
     ClickElement                ${Businessreference}
     ClickElement                ${Step}
