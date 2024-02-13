@@ -40,25 +40,27 @@ Creating And Verify to CDR request
     Swipe Down                  1
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
+    #Enter the required text in the "Reason for requesting payment
+    ScrollText                  Created by                  T Mounika
+    ClickElement                ${STARTCDR}
+    ScrollText                  Recipient document guidelines
+    VerifyText                  GMR status report: where relevant
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     Click Element               ${DecisionLetter}
     Click Element               ${SelectFile}
-    Sleep                       2
     # #'Decision Letter'should be able to upload As a required document
-    # QVision.DoubleClick       Home                        anchor=desktop
-    # QVision.DoubleClick       suite                       anchor=ui-recorder
-    # QVision.DoubleClick       files
-    # QVision.ClickText         FUNDAMENTALS .pdf
-    # QVision.ClickText         Open                        anchor=Cancel
-    # Click Text                Upload
-    # Sleep                     2
-    #Enter the required text in the "Reason for requesting payment
-    ScrollText                  Please ensure the following actions have been fulfilled before submitting the request:
-    ScrollText                  Created by        T Mounika
-    ScrollText                  Recipient document guidelines
-
+    QVision.DoubleClick         Home                        anchor=desktop
+    QVision.DoubleClick         suite                       anchor=ui-recorder
+    QVision.DoubleClick         files
+    QVision.ClickText           FUNDAMENTALS .pdf
+    QVision.ClickText           Open                        anchor=Cancel
+    Click Text                  Upload
+    Sleep                       2
+    ClickElement                ${STARTCDR}
+    VerifyText                  Reason for requesting payment
     Type Text                   Reason for requesting payment                           ${Request_payment}
+    VerifyText                  Enter USD amount of COVID-related payment or enter 0
     Type Text                   Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Click Text                  START CDR                   anchor=as Draft
     Sleep                       2
