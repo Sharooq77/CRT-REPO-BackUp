@@ -47,6 +47,7 @@ Creating And Verify to CDR request
     #Enter the required text in the "Reason for requesting payment
     ScrollText                  Created by                  T Mounika
     ClickElement                ${STARTCDR}
+    ClickElement                xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/div[2]/div[1]/div[2]/button[3]
     ScrollText                  Recipient document guidelines
     VerifyText                  GMR status report: where relevant
     sleep                       2
