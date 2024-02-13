@@ -45,6 +45,7 @@ Creating And Verify to CDR request
     ClickElement                ${STARTCDR}
     ScrollText                  Recipient document guidelines
     VerifyText                  GMR status report: where relevant
+    sleep                       2
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     Click Element               ${DecisionLetter}
@@ -56,14 +57,17 @@ Creating And Verify to CDR request
     QVision.ClickText           FUNDAMENTALS .pdf
     QVision.ClickText           Open                        anchor=Cancel
     Click Text                  Upload
-    Sleep                       2
+    Waiting
     ClickElement                ${STARTCDR}
     VerifyText                  Reason for requesting payment
+    Waiting
     Type Text                   Reason for requesting payment                           ${Request_payment}
     VerifyText                  Enter USD amount of COVID-related payment or enter 0
+    Waiting
     Type Text                   Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
+    Waiting
     Click Text                  START CDR                   anchor=as Draft
-    Sleep                       2
+    Waiting
     UseModal                    On
     Click Text                  START CDR                   recognition_mode=vision
-    Wait                        2
+    Waiting
