@@ -50,18 +50,19 @@ Creating And Verify to CDR request
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     Click Element               ${DecisionLetter}
     Click Element               ${SelectFile}
-     #'Decision Letter'should be able to upload As a required document
+    #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         suite                       anchor=ui-recorder
     QVision.DoubleClick         files
     QVision.ClickText           FUNDAMENTALS .pdf
     QVision.ClickText           Open                        anchor=Cancel
     Click Text                  Upload
-    ClickElement                ${STARTCDR}
     #verify the mandatory filed beforce click CDR button
     ClickElement                ${Reasonforrequestingpayment}
+    Waiting
     Type Text                   Reason for requesting payment                           ${Request_payment}
     ClickElement                ${Covid19relatedpayment}
+    Waiting
     Type Text                   Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Click Text                  START CDR                   anchor=as Draft
     Waiting
