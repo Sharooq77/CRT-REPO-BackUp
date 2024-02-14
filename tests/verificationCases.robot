@@ -14,7 +14,6 @@ Creating And Verify to CDR request
     ...                    if user is providing the "Amount to disburse for this request in 
     ...                    USD*" value is morethan 1 million and should able to create the CDR request.
 
-
     Run Keyword            Login
     # Switch To Classic If Lightning                   # This line is commented out as it may not be needed in Lightning Experience
     Verify Text            Switch to Lightning Experience
@@ -38,16 +37,18 @@ Creating And Verify to CDR request
     Click Element          ${BusinessKey}
     Click Text             ${Key}
     ClickElement           ${ProgrammeYear}
-    Click Text             ${Year}                     #
+    Click Text             ${Year}        # Amount Should be more than 1 Billion
     Click Text             Next
     Use Modal              On
     ScrollText             Created by                  T Mounika
     TypeText               amountToDisburseInput       1000001
-    VerifyText             Is the intended funds recipient listed in latest GMR ?
+    # Verify the Is the intended funds recipient listed in latest GMR? 
+    # and Is the disbursement related to TCA Value should be YES
     ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[1]
     ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[2]
     ClickText              Next
     ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/wizard-documents[1]/div[1]/div[1]/div[2]/div[1]/file-button[1]/button[1]
+    # Verify the PFM Review Check and Attach the Document
     Click Element          xpath=//button[@id='attach-uploadButton']
     ${FILE_PATH}           Set Variable                ${CURDIR}/Data/${FILE}
     QVision.DoubleClick    Home                        anchor=desktop
@@ -57,6 +58,7 @@ Creating And Verify to CDR request
     QVision.ClickText      Open                        anchor=Cancel
     Click Text             Upload
     sleep                  2
+    # Attach the Decision Letter Document
     Click Element          ${DecisionLetter}
     Click Element          ${SelectFile}
     Sleep                  2
@@ -70,7 +72,6 @@ Creating And Verify to CDR request
     Click Text             Upload
     Waiting
     ScrollText             Created by                  T Mounika
-
     VerifyText             Reason for requesting payment
     Waiting
     Type Text              Reason for requesting payment                           ${Request_payment}
@@ -83,8 +84,7 @@ Creating And Verify to CDR request
     UseModal               On
     Click Text             START CDR                   recognition_mode=vision
     Waiting
-
-
+    # Filter the Countries List and Select the Disbursement record status should be Open
     Click Text             Dashboard
     ClickText              All countries
     ClickText              Sudan
@@ -94,5 +94,6 @@ Creating And Verify to CDR request
     Sleep                  2
     Scroll Text            1.2 Senior Country Manager                              anchor=Created on
     ClickText              1.2 Senior Country Manager
+    # Verify the Approvers Comments
     VerifyText             Approver’s comment
     VerifyText            Approved
