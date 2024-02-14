@@ -40,6 +40,7 @@ Creating And Verify to CDR request
     TypeText               amountToDisburseInput       1000001
     VerifyText             Is the intended funds recipient listed in latest GMR ?
     clickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[1]
+    ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[2]
     # ClickElement           xpath=//md-select[1]/md-select-value[1]/span[1]
     clickText              Yes
     ClickText              Next
