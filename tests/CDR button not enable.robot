@@ -12,6 +12,7 @@ Suite Teardown                  End suite
 *** Test Cases ***
 Creating And Verify to CDR request
     [Tags]                      Users
+    [Documentation]             system should not enable the "START CDR" button if user is not selected the mandatory field values
     Appstate                    Home
     Switch To Classic If Lightning                          # This line is commented out as it may not be needed in Lightning Experience
     Verify Text                 Switch to Lightning Experience
@@ -49,7 +50,7 @@ Creating And Verify to CDR request
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     Click Element               ${DecisionLetter}
     Click Element               ${SelectFile}
-    # #'Decision Letter'should be able to upload As a required document
+     #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         suite                       anchor=ui-recorder
     QVision.DoubleClick         files
@@ -57,7 +58,7 @@ Creating And Verify to CDR request
     QVision.ClickText           Open                        anchor=Cancel
     Click Text                  Upload
     ClickElement                ${STARTCDR}
-    #verify the requried filed beforce click CDR button
+    #verify the mandatory filed beforce click CDR button
     ClickElement                ${Reasonforrequestingpayment}
     Type Text                   Reason for requesting payment                           ${Request_payment}
     ClickElement                ${Covid19relatedpayment}
