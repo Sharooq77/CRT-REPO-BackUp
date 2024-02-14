@@ -64,8 +64,8 @@ Creating And Verify to CDR request
     QVision.ClickText      Open                        anchor=Cancel
     Click Text             Upload
     Waiting
-    SwipeDown
-    ScrollText             GMR status report: where relevant
+    ScrollText             Created by                  T Mounika
+
     VerifyText             Reason for requesting payment
     Waiting
     Type Text              Reason for requesting payment                           ${Request_payment}
@@ -78,6 +78,8 @@ Creating And Verify to CDR request
     UseModal               On
     Click Text             START CDR                   recognition_mode=vision
     Waiting
+
+
     Click Text             Dashboard
     ClickText              All countries
     ClickText              Sudan
@@ -89,19 +91,3 @@ Creating And Verify to CDR request
     ClickText              1.2 Senior Country Manager
     VerifyText             Approver’s comment
     VerifyText            Approved
-
-
-
-
-
-    Type Text              Enter a comment             ${comment}
-    Scroll Text            APPROVE
-    ClickText              APPROVE
-
-    Verify Text            Sudan                       anchor=2
-    Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
-    Click Text             Show Less                   anchor=Country
-    Scroll Text            1.2 Senior Country Manager                              anchor=Created on
-    Type Text              Enter a comment             ${comment}
-    Scroll Text            APPROVE
-    Click Text             APPROVE
