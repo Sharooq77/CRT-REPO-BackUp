@@ -64,8 +64,8 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ClickText                   All requests
     ClickText                   My request
-    VerifyText                  CDR-2024-841
-    Click Text                  CDR-2024-841
+    VerifyText                  CDR-2024-842
+    Click Text                  CDR-2024-842
     Sleep                       2
     Verify Text                 Sudan                       anchor=2
     Verify All                  SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
