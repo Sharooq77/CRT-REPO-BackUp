@@ -10,6 +10,11 @@ Suite Teardown             End suite
 *** Test Cases ***
 Creating And Verify to CDR request
     [Tags]                 Users
+    [Documentation]        Verify that system should make the "PFM REVIEW CHECK" is mandatory 
+    ...                    if user is providing the "Amount to disburse for this request in 
+    ...                    USD*" value is morethan 1 million and should able to create the CDR request.
+
+
     Run Keyword            Login
     # Switch To Classic If Lightning                   # This line is commented out as it may not be needed in Lightning Experience
     Verify Text            Switch to Lightning Experience
