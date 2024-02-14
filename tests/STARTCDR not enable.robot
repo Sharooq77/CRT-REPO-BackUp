@@ -38,7 +38,7 @@ Creating And Verify to CDR request
     Click Text                  ${Year}                     #
     Click Text                  Next
     Use Modal                   On
-    Swipe Down                  1
+    ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
 
