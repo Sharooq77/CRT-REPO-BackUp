@@ -50,9 +50,9 @@ Creating And Verify to CDR request
     ClickElement                ${Status}
     ClickElement                ${Status}
     #Change the filter values as Type as "My requests" value
-    # ClickText                   All request
-    # ClickText                   My request
-    # ClickText                   All request
+    # ClickText                 All request
+    # ClickText                 My request
+    # ClickText                 All request
     Clicktext                   All countries
     #All Countries as "Afghanistan" and Algeria
     ClickText                   Afghanistan
@@ -66,3 +66,7 @@ Creating And Verify to CDR request
     ClickText                   Draft
     ClickText                   Sent to SAP
     ClickText                   All request
+    ClickText                   CORE-EAP
+    ClickText                   Draft
+    ClickText                   Sent to SAP
+    ClickText                   Open
