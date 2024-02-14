@@ -66,7 +66,4 @@ Creating And Verify to CDR request
     ClickText                   Draft
     ClickText                   Sent to SAP
     ClickText                   All request
-    ClickText                   CORE-EAP
-    ClickText                   Draft
-    ClickText                   Sent to SAP
-    ClickText                   Open
+    
