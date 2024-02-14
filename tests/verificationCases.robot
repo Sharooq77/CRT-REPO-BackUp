@@ -51,20 +51,11 @@ Creating And Verify to CDR request
     QVision.ClickText      FUNDAMENTALS .pdf
     QVision.ClickText      Open                        anchor=Cancel
     Click Text             Upload
+    sleep                  2
     Click Element          ${DecisionLetter}
     Click Element          ${SelectFile}
     Sleep                  2
-
-    #Enter the required text in the "Reason for requesting payment
-    ScrollText             Created by                  T Mounika
-    ClickElement           ${STARTCDR}
-    ScrollText             Recipient document guidelines
-    VerifyText             GMR status report: where relevant
-    sleep                  2
-    #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}           Set Variable                ${CURDIR}/Data/${FILE}
-    Click Element          ${DecisionLetter}
-    Click Element          ${SelectFile}
     # #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick    Home                        anchor=desktop
     QVision.DoubleClick    suite                       anchor=ui-recorder
@@ -73,7 +64,7 @@ Creating And Verify to CDR request
     QVision.ClickText      Open                        anchor=Cancel
     Click Text             Upload
     Waiting
-    ClickElement           ${STARTCDR}
+    SwipeDown
     ScrollText             GMR status report: where relevant
     VerifyText             Reason for requesting payment
     Waiting
@@ -82,7 +73,13 @@ Creating And Verify to CDR request
     Waiting
     Type Text              Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Waiting
-    VerifyText             START CDR                   anchor=as Draft
+    # VerifyText             START CDR                   anchor=as Draft
+    Click Text             START CDR                   anchor=as Draft
+    Waiting
+    UseModal               On
+    Type Text              Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
+    Waiting
+    # VerifyText           START CDR                   anchor=as Draft
     Click Text             START CDR                   anchor=as Draft
     Waiting
     UseModal               On
@@ -90,12 +87,28 @@ Creating And Verify to CDR request
     Click Text             START CDR                   recognition_mode=vision
     Waiting
 
-    #Verify the SCM user should able to approve the CDR request
-    ClickText              All requests
-    ClickText              My request
-    VerifyText             CDR-2024-818
-    Click Text             CDR-2024-818                partial_match=Flase
+    Click Text             Dashboard
+    ClickText              All countries
+    ClickText              Niger
+    ClickText              Filters
+
+    VerifyText             CDR-2024-814
+    Click Text             CDR-2024-814                partial_match=Flase
     Sleep                  2
+    Scroll Text            1.2 Senior Country Manager                              anchor=Created on
+    ClickText              1.2 Senior Country Manager
+
+    VerifyText             Approver’s comment
+    VerifyText            Approved
+
+
+
+
+
+    Type Text              Enter a comment             ${comment}
+    Scroll Text            APPROVE
+    ClickText              APPROVE
+
     Verify Text            Sudan                       anchor=2
     Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
     Click Text             Show Less                   anchor=Country
