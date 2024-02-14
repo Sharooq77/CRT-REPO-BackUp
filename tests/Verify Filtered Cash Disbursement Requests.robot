@@ -12,7 +12,7 @@ Suite Teardown                  End suite
 Creating And Verify to CDR request
     [Tags]                      Users
     Appstate                    Home
-    Switch To Classic If Lightning                          # This line is commented out as it may not be needed in Lightning Experience
+   # Switch To Classic If Lightning                          # This line is commented out as it may not be needed in Lightning Experience
     Verify Text                 Switch to Lightning Experience
     Click Item                  All Tabs
     Click Text                  Disbursements
