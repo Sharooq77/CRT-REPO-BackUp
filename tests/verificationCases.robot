@@ -43,11 +43,17 @@ Creating And Verify to CDR request
     ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[2]
     ClickText              Next
     ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/wizard-documents[1]/div[1]/div[1]/div[2]/div[1]/file-button[1]/button[1]
+    Click Element          xpath=//button[@id='attach-uploadButton']
     ${FILE_PATH}           Set Variable                ${CURDIR}/Data/${FILE}
+    QVision.DoubleClick    Home                        anchor=desktop
+    QVision.DoubleClick    suite                       anchor=ui-recorder
+    QVision.DoubleClick    files
+    QVision.ClickText      FUNDAMENTALS .pdf
+    QVision.ClickText      Open                        anchor=Cancel
+    Click Text             Upload
     Click Element          ${DecisionLetter}
     Click Element          ${SelectFile}
     Sleep                  2
-
 
     #Enter the required text in the "Reason for requesting payment
     ScrollText             Created by                  T Mounika
