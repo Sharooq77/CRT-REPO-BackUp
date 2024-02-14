@@ -38,18 +38,19 @@ Creating And Verify to CDR request
     Click Text                  ${Year}                     #
     Click Text                  Next
     Use Modal                   On
-    Swipe Down                  1
+    ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
 
 
 
     #Enter the required text in the "Reason for requesting payment
-    ScrollText                  Created by                  T Mounika
+    ScrollText                  Disbursement details
     ClickElement                ${STARTCDR}
-    ScrollText                  Recipient document guidelines
+    ClickElement                xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/wizard-documents[1]/div[1]/div[2]/div[1]/div[2]/div[1]
     VerifyText                  GMR status report: where relevant
     sleep                       2
+    ClickElement                xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/beneficiary-details[1]/div[1]/md-content[1]/form[1]/md-input-container[1]
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     Click Element               ${DecisionLetter}
@@ -61,14 +62,10 @@ Creating And Verify to CDR request
     QVision.ClickText           FUNDAMENTALS .pdf
     QVision.ClickText           Open                        anchor=Cancel
     Click Text                  Upload
-    Waiting
     ClickElement                ${STARTCDR}
-    ScrollText                  GMR status report: where relevant
-    VerifyText                  Reason for requesting payment
-    Waiting
+    ClickElement                xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/beneficiary-details[1]/div[1]/md-content[1]/form[1]/div[2]/md-input-container[1]
     Type Text                   Reason for requesting payment                           ${Request_payment}
-    VerifyText                  Enter USD amount of COVID-related payment or enter 0
-    Waiting
+    ClickElement                xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/beneficiary-details[1]/div[1]/md-content[1]/form[1]/md-input-container[1]
     Type Text                   Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Waiting
     VerifyText                  START CDR                   anchor=as Draft
