@@ -34,10 +34,9 @@ Creating And Verify to CDR request
     Click Element               ${BusinessKey}
     Click Text                  ${Key}
     ClickElement                ${ProgrammeYear}
-    Click Text                  ${Year}                     #
+    Click Text                  ${Year}
     Click Text                  Next
-    Use Modal                   On
-    Swipe Down                  1
+    ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
@@ -65,8 +64,8 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ClickText                   All requests
     ClickText                   My request
-    VerifyText                  CDR-2024-818
-    Click Text                  CDR-2024-818                partial_match=Flase
+    VerifyText                  CDR-2024-841
+    Click Text                  CDR-2024-841             
     Sleep                       2
     Verify Text                 Sudan                       anchor=2
     Verify All                  SDN-HSS-3-MOH,Government (MoH),Testing,,USD 11
@@ -74,11 +73,13 @@ Creating And Verify to CDR request
     Scroll Text                 1.2 Senior Country Manager                              anchor=Created on
     Type Text                   Enter a comment             ${comment}
     Scroll Text                 APPROVE
-    Click Text                  APPROVE
+    ClickText                   APPROVE
     #Verify the Regional Head user should able to approve the CDR request
     ScrollText                  Regional Head
     Click Text                  2.1 Regional Head
     Scroll Text                 Assigned
+    ClickElement                xpath=//body/span[@id='j_id0:j_id2']/app[1]/div[1]/md-content[1]/x-cdr-container[1]/div[1]/md-content[1]/md-tabs[1]/md-tabs-content-wrapper[1]/md-tab-content[1]/div[1]/md-content[1]/cdr-outcomes[1]/div[1]/form[1]/md-content[1]/div[2]/collapsable-card[1]/md-card[1]/md-card-content[1]/div[1]/div[3]/div[1]/v-accordion[1]/v-pane[1]/v-pane-content[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/md-radio-group[1]/md-radio-button[1]/div[1]/div[1]
+    ClickText                   Approve                     recognitation_mode=vision
     Verify All                  Decision,Waiting for Decision
     Verify Text                 Waiting for Approver’s comment
 
