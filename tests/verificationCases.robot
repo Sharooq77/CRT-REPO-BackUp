@@ -73,31 +73,20 @@ Creating And Verify to CDR request
     Waiting
     Type Text              Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Waiting
-    # VerifyText             START CDR                   anchor=as Draft
     Click Text             START CDR                   anchor=as Draft
     Waiting
     UseModal               On
-    Type Text              Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
-    Waiting
-    # VerifyText           START CDR                   anchor=as Draft
-    Click Text             START CDR                   anchor=as Draft
-    Waiting
-    UseModal               On
-
     Click Text             START CDR                   recognition_mode=vision
     Waiting
-
     Click Text             Dashboard
     ClickText              All countries
-    ClickText              Niger
+    ClickText              Sudan
     ClickText              Filters
-
     VerifyText             CDR-2024-814
     Click Text             CDR-2024-814                partial_match=Flase
     Sleep                  2
     Scroll Text            1.2 Senior Country Manager                              anchor=Created on
     ClickText              1.2 Senior Country Manager
-
     VerifyText             Approver’s comment
     VerifyText            Approved
 
