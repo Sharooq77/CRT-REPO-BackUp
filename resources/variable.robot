@@ -3,8 +3,11 @@
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${Country}                  xpath=//body[1]/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[1]/beneficiary-details[1]/div[1]/md-content[1]/md-input-container[1]/md-select[1]
 ${RecipientVendor}          xpath=//body[1]/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[1]/beneficiary-details[1]/div[1]/md-content[1]/md-input-container[2]/md-select[1]
+${Vendor}                   xpath=//body[1]/div[5]/md-select-menu[1]/md-content[1]/md-option[1]
 ${BusinessKey}              xpath=//body[1]/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[1]/beneficiary-details[1]/div[1]/md-content[1]/div[1]/md-input-container[1]/md-select[1]
+${Key}                      xpath= //body[1]/div[6]/md-select-menu[1]/md-content[1]/md-option[1]
 ${ProgrammeYear}            xpath=//body[1]/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[1]/beneficiary-details[1]/div[1]/md-content[1]/md-input-container[3]/md-select[1]
+${Year}                     xpath= //body[1]/div[7]/md-select-menu[1]/md-content[1]/md-option[1]/div[1]
 ${FILE}                     FUNDAMENTALS .pdf
 ${STARTCDR}                 xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/div[2]/div[1]/div[2]/button[3]/div[1]
 ${requiredDocument}         xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/div[2]/wizard-documents[1]/div[1]/div[2]/div[1]/div[2]/div[1]
