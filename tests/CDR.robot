@@ -39,6 +39,9 @@ Creating And Verify to CDR request
     ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
     ClickText                   Next
+    QVision.Verifytext          CDR
+    ${var}                      QVision.Get Text            CDR with
+    ${CDR}                      Evaluate                    $var.split(" ")[3]
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
     ClickItem                   Decision Letter
@@ -61,7 +64,8 @@ Creating And Verify to CDR request
     Click Text                  START CDR                   recognition_mode=vision
     Wait                        2
     #Verify the SCM user should able to approve the CDR request
-    ClickText                   All requests
+    # ClickText                   All requests
+    ClickText                   ${CDR} 
     ClickText                   My request
     ClickElement                ${Code}
     ClickElement                ${Code}
@@ -89,7 +93,6 @@ Creating And Verify to CDR request
     VerifyText                  Sent to SAP
     ${URL}                      GetUrl
     ${number}                   Evaluate                    $URL.split("/")[6]
-     GoTo                      https://gavi--uat.sandbox.my.salesforce.com/${number}
     GoTo                        ${CheckCDR}/${number}
 *** Test Cases ***
 Browser open     https://outlook.office.com                              chrome
