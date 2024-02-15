@@ -2,7 +2,7 @@
 Resource                        ../resources/common.robot
 Resource                        ../resources/variable.robot
 Library                         QVision
-Library                         DataDriver                  reader_class=TestDataApi    name=Gaviupdate.xlsx
+Library                         DataDriver                  reader_class=TestDataApi    name=Gaviupdateone.xlsx
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
