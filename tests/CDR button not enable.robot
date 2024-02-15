@@ -48,8 +48,8 @@ Creating And Verify to CDR request
     ClickElement                ${requiredDocument}
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
-    Click Element               ${DecisionLetter}
-    Click Element               ${SelectFile}
+    ClickItem                   Decision Letter
+    ClickText                   Select a file *
     #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         suite                       anchor=ui-recorder
