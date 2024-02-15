@@ -34,9 +34,9 @@ Creating And Verify to CDR request
     Click Text             ${Vender}
     Sleep                  2
     Click Element          ${BusinessKey}
-    Click Text             ${Key}
+    Click Text             /html[1]/body[1]/div[6]/md-select-menu[1]/md-content[1]/md-option[1]
     ClickElement           ${ProgrammeYear}
-    Click Text             ${Year}                     # Amount Should be more than 1 Billion
+    Click Text             /html[1]/body[1]/div[7]/md-select-menu[1]/md-content[1]/md-option[1]                    # Amount Should be more than 1 Billion
     Click Text             Next
     Use Modal              On
     ScrollText             Created by                  T Mounika
