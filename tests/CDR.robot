@@ -64,9 +64,9 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ClickText                   All requests
     ClickText                   My request
-    ClickElement                ${Country1}
-    ClickElement                ${Country1}
-    ClickElement                xpath=//a[contains(text(),'CDR-2024-868')]
+    ClickElement                ${Code}
+    ClickElement                ${Code}
+    ClickElement                xpath=/html[1]/body[1]/span[1]/app[1]/div[1]/md-content[1]/x-dashboard[1]/div[1]/div[1]/disbursement-table[1]/div[1]/md-table-container[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]
     Sleep                       2
     Verify Text                 Sudan                       anchor=2
     Verify All                  SDN-HSS-3-MOH,Government (MoH),Testing,USD 11
@@ -75,6 +75,9 @@ Creating And Verify to CDR request
     Type Text                   Enter a comment             ${comment}
     Scroll Text                 APPROVE
     ClickText                   APPROVE
+    
+    GetUrl                      https://gavi--uat--c.sandbox.vf.force.com/apex/gnet_cdr_home#/request-details/a3J7a000000ys3fEAA
+    
     #Verify the Regional Head user should able to approve the CDR request
     ScrollText                  Regional Head
     Click Text                  2.1 Regional Head
