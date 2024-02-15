@@ -63,10 +63,7 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ClickText                   All requests
     ClickText                   My request
-    UseTable                    Cash disbursement requests
-    clicktext                   Code                        partial_match=False         recognition_mode=vision
-    clickitem                   Code                        partial_match=False         recognition_mode=vision
-    ClickElement                xpath=//thead/tr[1]/th[2]
+    ClickElement                ${Code}
     ClickElement                ${Code}
     ClickElement                xpath=/html[1]/body[1]/span[1]/app[1]/div[1]/md-content[1]/x-dashboard[1]/div[1]/div[1]/disbursement-table[1]/div[1]/md-table-container[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]
     Sleep                       2
@@ -78,10 +75,7 @@ Creating And Verify to CDR request
     Scroll Text                 APPROVE
     ClickText                   APPROVE
 
-    ${URL}                      GetUrl
-    ${number}                   Evaluate                    $URL.split("/")[6]
-    GoTo                        https://gavi--uat.sandbox.my.salesforce.com/${number}
-    GoTo                        ${new}/${number}
+
     #Verify the Regional Head user should able to approve the CDR request
     ScrollText                  Regional Head
     Click Text                  2.1 Regional Head
@@ -93,7 +87,10 @@ Creating And Verify to CDR request
     ClickText                   MARK TASK AS COMPLETED
     SwipeUp                     2
     VerifyText                  Sent to SAP
-
+    ${URL}                      GetUrl
+    ${number}                   Evaluate                    $URL.split("/")[6]
+    # GoTo                      https://gavi--uat.sandbox.my.salesforce.com/${number}
+    GoTo                        ${CheckCDR}/${number}
 *** Test Cases ***
 Browser open     https://outlook.office.com                              chrome
     Type Text                   Email, phone, or Skype      ${username}
