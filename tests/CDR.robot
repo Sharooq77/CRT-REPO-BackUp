@@ -30,22 +30,22 @@ Creating And Verify to CDR request
     Click Element               ${Country}
     Click Text                  ${Name}
     Click Element               ${RecipientVendor}
-    Click text                  ${Vendor}
+    Click Element               ${Vendor}
     Click Element               ${BusinessKey}
-    Click Text                  ${Key}
-    ClickElement                ${ProgrammeYear}
-    Click Text                  ${Year}
+    Click Element               ${Key}
+    Click Element               ${ProgrammeYear}
+    Click Element               ${Year}
     Click Text                  Next
-    ScrollText                  Created by                  T Mounika
-    TypeText                    amountToDisburseInput       ${Amount}
-    ClickText                   Next
+    Scroll Text                 Created by                  T Mounika
+    Type Text                   amountToDisburseInput       ${Amount}
+    Click Text                  Next
     QVision.Verifytext          CDR
     ${var}                      QVision.Get Text            CDR with
     ${CDR}                      Evaluate                    $var.split(" ")[3]
     #THIS IS FOR ONE FOLDER FILE ,IF FILE IS IN ANOTHER SUIT USE EXADIR
     ${FILE_PATH}                Set Variable                ${CURDIR}/Data/${FILE}
-    ClickItem                   Decision Letter
-    ClickText                   Select a file *
+    Click Item                  Decision Letter
+    Click Text                  Select a file *
     #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         suite                       anchor=ui-recorder
@@ -65,7 +65,7 @@ Creating And Verify to CDR request
     Wait                        2
     #Verify the SCM user should able to approve the CDR request
 
-    ClickText                   ${CDR}
+    Click Text                  ${CDR}
     # ClickText                 My request
     # ClickElement              ${Code}
     # ClickElement              ${Code}
@@ -77,19 +77,20 @@ Creating And Verify to CDR request
     Scroll Text                 1.2 Senior Country Manager                              anchor=Created on
     Type Text                   Enter a comment             ${comment}
     Scroll Text                 APPROVE
-    ClickText                   APPROVE
+    Click Text                  APPROVE
 
     #Verify the Regional Head user should able to approve the CDR request
-    ScrollText                  Regional Head
+    Scroll Text                 Regional Head
     Click Text                  2.1 Regional Head
     Scroll Text                 Assigned
-    ClickElement                ${Approve}
+    Click Element               ${Approve}
     Type Text                   Approver’s comment          ${comment}
     Type Text                   Reason for delay if applicable                          ${Request_payment}
-    VerifyText                  MARK TASK AS COMPLETED
-    ClickText                   MARK TASK AS COMPLETED
+    Verify Text                 MARK TASK AS COMPLETED
+    Click Text                  MARK TASK AS COMPLETED
     SwipeUp                     2
-    VerifyText                  Sent to SAP
+    Verify Text                 Sent to SAP
+    #check the CDR number
     ${URL}                      GetUrl
     ${number}                   Evaluate                    $URL.split("/")[6]
     GoTo                        ${CheckCDR}/${number}
