@@ -96,16 +96,10 @@ Creating And Verify to CDR request
     VerifyTable            r7c1                        Amount to disburse for this request in USD*
     VerifyTable            r7c4                        1,000,001.00
     ScrollText             Created by                  T Mounika
+    ClickText              code
     TypeText               Enter a comment             Approved
     TypeText               Enter a reason for delay    NA
     ScrollText             been attached.              anchor=CANCEL
     VerifyText             APPROVE
     ClickText              APPROVE
     Sleep                  5
-
-
-    Scroll Text            1.2 Senior Country Manager                              anchor=Created on
-    ClickText              1.2 Senior Country Manager
-    # Verify the Approvers Comments
-    VerifyText             Approver’s comment
-    VerifyText             Approved
