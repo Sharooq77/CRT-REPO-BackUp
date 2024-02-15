@@ -84,7 +84,9 @@ Creating And Verify to CDR request
     Scroll Text                 Regional Head
     Click Text                  2.1 Regional Head
     Scroll Text                 Assigned
-    Click Element               ${Approve1}
+    Click Element               ${Approve}
+   # ClickText                   Reject                                           
+    ClickText                   Approve                    anchor=Reject              
     Type Text                   Approver’s comment          ${comment}
     Type Text                   Reason for delay if applicable                          ${Request_payment}
     Verify Text                 MARK TASK AS COMPLETED
