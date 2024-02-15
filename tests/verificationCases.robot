@@ -6,7 +6,6 @@ Library                    DataDriver                  reader_class=TestDataApi 
 Suite Setup                Setup Browser
 Suite Teardown             End suite
 
-
 *** Test Cases ***
 Creating And Verify to CDR request
     [Tags]                 Users
