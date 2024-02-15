@@ -74,7 +74,8 @@ Creating And Verify to CDR request
     Scroll Text                 APPROVE
     ClickText                   APPROVE
 
-    GetUrl                      https://gavi--uat--c.sandbox.vf.force.com/apex/gnet_cdr_home#/request-details/a3J7a000000ys3fEAA
+    ${URL}                      GetUrl        
+    ${number}                    Evaluate          $URL.split("/")[4] 
 
     #Verify the Regional Head user should able to approve the CDR request
     ScrollText                  Regional Head
