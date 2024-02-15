@@ -64,7 +64,8 @@ Creating And Verify to CDR request
     Click Text                  START CDR                   recognition_mode=vision
     Wait                        2
     #Verify the SCM user should able to approve the CDR request
-
+    ClickText                 All request
+    ClickText                 My request
     Click Text                  ${CDR}
     # ClickText                 My request
     # ClickElement              ${Code}
