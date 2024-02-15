@@ -11,7 +11,7 @@ ${username}                     mounika.t@cloudfulcrum.com.uat
 ${password}                     GAVI@1234
 ${login_url}                    https://test.salesforce.com                             # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
-${new}                          https://gavi--uat.sandbox.my.salesforce.com
+${CheckCDR}                     https://gavi--uat.sandbox.my.salesforce.com
 *** Keywords ***
 Setup Browser
     # Setting search order is not really needed here, but given as an example
