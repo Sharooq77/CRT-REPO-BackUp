@@ -70,7 +70,7 @@ Creating And Verify to CDR request
     QVision.ClickText      Open                        anchor=Cancel
     Click Text             Upload
     Waiting
-    ScrollText             Created by                  T Mounika
+    ScrollText             GMR status report: where relevant
     VerifyText             Reason for requesting payment
     Waiting
     Type Text              Reason for requesting payment                           ${Request_payment}
