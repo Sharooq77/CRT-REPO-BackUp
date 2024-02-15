@@ -32,9 +32,9 @@ Creating And Verify to CDR request
     Click Text                  ${Vender}
     Sleep                       2
     Click Element               ${BusinessKey}
-    Click Text                  ${Key}
+    Click Text                  /html[1]/body[1]/div[6]/md-select-menu[1]/md-content[1]/md-option[1]
     ClickElement                ${ProgrammeYear}
-    Click Text                  ${Year}
+    Click Text                  /html[1]/body[1]/div[7]/md-select-menu[1]/md-content[1]/md-option[1]
     Click Text                  Next
     ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
@@ -75,9 +75,9 @@ Creating And Verify to CDR request
     Type Text                   Enter a comment             ${comment}
     Scroll Text                 APPROVE
     ClickText                   APPROVE
-    
+
     GetUrl                      https://gavi--uat--c.sandbox.vf.force.com/apex/gnet_cdr_home#/request-details/a3J7a000000ys3fEAA
-    
+
     #Verify the Regional Head user should able to approve the CDR request
     ScrollText                  Regional Head
     Click Text                  2.1 Regional Head
