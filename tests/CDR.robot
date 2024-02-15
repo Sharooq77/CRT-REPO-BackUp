@@ -89,7 +89,7 @@ Creating And Verify to CDR request
     VerifyText                  Sent to SAP
     ${URL}                      GetUrl
     ${number}                   Evaluate                    $URL.split("/")[6]
-    # GoTo                      https://gavi--uat.sandbox.my.salesforce.com/${number}
+     GoTo                      https://gavi--uat.sandbox.my.salesforce.com/${number}
     GoTo                        ${CheckCDR}/${number}
 *** Test Cases ***
 Browser open     https://outlook.office.com                              chrome
