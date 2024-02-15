@@ -55,7 +55,7 @@ Creating And Verify to CDR request
     Click Text                  Upload
     Sleep                       2
     #Enter the required text in the "Reason for requesting payment
-    ScrollText                  Recipient document guidelines        recognition_mode=vision
+    ScrollText                  Recipient document guidelines                           recognition_mode=vision
     Type Text                   Reason for requesting payment                           ${Request_payment}
     Type Text                   Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Click Text                  START CDR                   anchor=as Draft
@@ -83,7 +83,7 @@ Creating And Verify to CDR request
     Scroll Text                 Regional Head
     Click Text                  2.1 Regional Head
     Scroll Text                 Assigned
-    Click Element               ${Approve}
+    Click Element               ${Approve1}
     Type Text                   Approver’s comment          ${comment}
     Type Text                   Reason for delay if applicable                          ${Request_payment}
     Verify Text                 MARK TASK AS COMPLETED
