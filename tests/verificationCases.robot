@@ -31,7 +31,7 @@ Creating And Verify to CDR request
     Click Element          ${Country}
     Click Text             ${Name}
     Click Element          ${RecipientVendor}
-    Click Text             ${Vender}
+    Click Text             ${Vendor}
     Sleep                  2
     Click Element          ${BusinessKey}
     Click Text             /html[1]/body[1]/div[6]/md-select-menu[1]/md-content[1]/md-option[1]
