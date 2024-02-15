@@ -30,11 +30,11 @@ Creating And Verify to CDR request
     Click Element               ${Country}
     Click Text                  ${Name}
     Click Element               ${RecipientVendor}
-    Click text                  //body[1]/div[5]/md-select-menu[1]/md-content[1]/md-option[1]
+    Click text                  ${Vendor}
     Click Element               ${BusinessKey}
-    Click Text                  //body[1]/div[6]/md-select-menu[1]/md-content[1]/md-option[1]
+    Click Text                  ${Key}
     ClickElement                ${ProgrammeYear}
-    Click Text                  //body[1]/div[7]/md-select-menu[1]/md-content[1]/md-option[1]/div[1]
+    Click Text                  ${Year}
     Click Text                  Next
     ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
@@ -64,12 +64,12 @@ Creating And Verify to CDR request
     Click Text                  START CDR                   recognition_mode=vision
     Wait                        2
     #Verify the SCM user should able to approve the CDR request
-    # ClickText                   All requests
-    ClickText                   ${CDR} 
-    ClickText                   My request
-    ClickElement                ${Code}
-    ClickElement                ${Code}
-    ClickElement                xpath=/html[1]/body[1]/span[1]/app[1]/div[1]/md-content[1]/x-dashboard[1]/div[1]/div[1]/disbursement-table[1]/div[1]/md-table-container[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]
+
+    ClickText                   ${CDR}
+    # ClickText                 My request
+    # ClickElement              ${Code}
+    # ClickElement              ${Code}
+    # ClickElement              xpath=/html[1]/body[1]/span[1]/app[1]/div[1]/md-content[1]/x-dashboard[1]/div[1]/div[1]/disbursement-table[1]/div[1]/md-table-container[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]
     Sleep                       2
     Verify Text                 Sudan                       anchor=2
     Verify All                  SDN-HSS-3-MOH,Government (MoH),Testing,USD 11
@@ -78,7 +78,6 @@ Creating And Verify to CDR request
     Type Text                   Enter a comment             ${comment}
     Scroll Text                 APPROVE
     ClickText                   APPROVE
-
 
     #Verify the Regional Head user should able to approve the CDR request
     ScrollText                  Regional Head
