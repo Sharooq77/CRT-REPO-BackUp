@@ -29,12 +29,11 @@ Creating And Verify to CDR request
     Click Element               ${Country}
     Click Text                  ${Name}
     Click Element               ${RecipientVendor}
-    Click Text                  ${Vender}
-    Sleep                       2
+    Click text                  //body[1]/div[5]/md-select-menu[1]/md-content[1]/md-option[1]
     Click Element               ${BusinessKey}
-    Click Text                  /html[1]/body[1]/div[6]/md-select-menu[1]/md-content[1]/md-option[1]
+    Click Text                  //body[1]/div[5]/md-select-menu[1]/md-content[1]/md-option[1]
     ClickElement                ${ProgrammeYear}
-    Click Text                  /html[1]/body[1]/div[7]/md-select-menu[1]/md-content[1]/md-option[1]
+    Click Text                  //body[1]/div[7]/md-select-menu[1]/md-content[1]/md-option[1]/div[1]
     Click Text                  Next
     ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
