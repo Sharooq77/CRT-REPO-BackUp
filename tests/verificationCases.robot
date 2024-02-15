@@ -9,8 +9,8 @@ Suite Teardown             End suite
 *** Test Cases ***
 Creating And Verify to CDR request
     [Tags]                 Users
-    [Documentation]        Verify that system should make the "PFM REVIEW CHECK" is mandatory 
-    ...                    if user is providing the "Amount to disburse for this request in 
+    [Documentation]        Verify that system should make the "PFM REVIEW CHECK" is mandatory
+    ...                    if user is providing the "Amount to disburse for this request in
     ...                    USD*" value is morethan 1 million and should able to create the CDR request.
 
     Run Keyword            Login
@@ -36,12 +36,12 @@ Creating And Verify to CDR request
     Click Element          ${BusinessKey}
     Click Text             ${Key}
     ClickElement           ${ProgrammeYear}
-    Click Text             ${Year}        # Amount Should be more than 1 Billion
+    Click Text             ${Year}                     # Amount Should be more than 1 Billion
     Click Text             Next
     Use Modal              On
     ScrollText             Created by                  T Mounika
     TypeText               amountToDisburseInput       1000001
-    # Verify the Is the intended funds recipient listed in latest GMR? 
+    # Verify the Is the intended funds recipient listed in latest GMR?
     # and Is the disbursement related to TCA Value should be YES
     ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[1]
     ClickElement           xpath=//body/div[3]/md-dialog[1]/md-dialog-content[1]/form[1]/md-card[1]/md-content[1]/disbursement-details[1]/div[1]/form[1]/div[2]
@@ -86,21 +86,20 @@ Creating And Verify to CDR request
     # Filter the Countries List and Select the Disbursement record status should be Open
     Click Text             Dashboard
     ClickText              All countries
-    
-    
     ClickElement           xpath=//thead/tr[1]/th[2]
     ClickElement           xpath=//thead/tr[1]/th[2]
     ClickElement           xpath=/html[1]/body[1]/span[1]/app[1]/div[1]/md-content[1]/x-dashboard[1]/div[1]/div[1]/disbursement-table[1]/div[1]/md-table-container[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]
     Waiting
+    ScrollText             Created by                  T Mounika
+    TypeText               Enter a comment             Approved
+    TypeText               Enter a reason for delay    NA
+    ScrollText             been attached.              anchor=CANCEL
+    VerifyText             APPROVE
+    ClickText              APPROVE
 
 
-    ClickText              Sudan
-    ClickText              Filters
-    VerifyText             CDR-2024-814
-    Click Text             CDR-2024-814                partial_match=Flase
-    Sleep                  2
     Scroll Text            1.2 Senior Country Manager                              anchor=Created on
     ClickText              1.2 Senior Country Manager
     # Verify the Approvers Comments
     VerifyText             Approver’s comment
-    VerifyText            Approved
+    VerifyText             Approved
