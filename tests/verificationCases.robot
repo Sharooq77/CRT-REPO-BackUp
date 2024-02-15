@@ -95,8 +95,8 @@ Creating And Verify to CDR request
     UseTable               Disbursement details Show Less
     VerifyTable            r7c1                        Amount to disburse for this request in USD*
     VerifyTable            r7c4                        1,000,001.00
-    ScrollText             Created by                  T Mounika
     ClickText              code
+    ScrollText             Created by                  T Mounika   
     TypeText               Enter a comment             Approved
     TypeText               Enter a reason for delay    NA
     ScrollText             been attached.              anchor=CANCEL
