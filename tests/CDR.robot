@@ -77,6 +77,7 @@ Creating And Verify to CDR request
 
     ${URL}                      GetUrl        
     ${number}                    Evaluate          $URL.split("/")[6] 
+    GoTo                         https://gavi--uat.sandbox.my.salesforce.com/${number}
      GoTo                        ${new}/${number}  
     #Verify the Regional Head user should able to approve the CDR request
     ScrollText                  Regional Head
