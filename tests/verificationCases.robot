@@ -90,8 +90,6 @@ Creating And Verify to CDR request
     ClickElement           xpath=//thead/tr[1]/th[2]
     ClickElement           xpath=/html[1]/body[1]/span[1]/app[1]/div[1]/md-content[1]/x-dashboard[1]/div[1]/div[1]/disbursement-table[1]/div[1]/md-table-container[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]
     Waiting
-
-
     UseTable               Disbursement details Show Less
     VerifyTable            r7c1                        Amount to disburse for this request in USD*
     VerifyTable            r7c4                        1,000,001.00
