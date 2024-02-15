@@ -64,8 +64,9 @@ Creating And Verify to CDR request
     #Verify the SCM user should able to approve the CDR request
     ClickText                   All requests
     ClickText                   My request
-    VerifyText                  CDR-2024-864
-    Click Text                  CDR-2024-864
+    ClickElement                ${Country1}
+    ClickElement                ${Country1}
+    ClickElement                xpath=//a[contains(text(),'CDR-2024-868')]
     Sleep                       2
     Verify Text                 Sudan                       anchor=2
     Verify All                  SDN-HSS-3-MOH,Government (MoH),Testing,USD 11
