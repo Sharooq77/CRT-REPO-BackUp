@@ -34,9 +34,9 @@ Creating And Verify to CDR request
     Click Text             ${Vendor}
     Sleep                  2
     Click Element          ${BusinessKey}
-    Click Text             /html[1]/body[1]/div[6]/md-select-menu[1]/md-content[1]/md-option[1]
+    Click Text             ${Key}
     ClickElement           ${ProgrammeYear}
-    Click Text             /html[1]/body[1]/div[7]/md-select-menu[1]/md-content[1]/md-option[1]                    # Amount Should be more than 1 Billion
+    Click Text             ${Year}                     # Amount Should be more than 1 Billion
     Click Text             Next
     Use Modal              On
     ScrollText             Created by                  T Mounika
@@ -94,7 +94,7 @@ Creating And Verify to CDR request
     VerifyTable            r7c1                        Amount to disburse for this request in USD*
     VerifyTable            r7c4                        1,000,001.00
     ClickText              code
-    ScrollText             Created by                  T Mounika   
+    ScrollText             Created by                  T Mounika
     TypeText               Enter a comment             Approved
     TypeText               Enter a reason for delay    NA
     ScrollText             been attached.              anchor=CANCEL
