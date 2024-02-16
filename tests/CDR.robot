@@ -92,6 +92,7 @@ Creating And Verify to CDR request
     Type Text              Reason for delay if applicable                          ${Request_payment}
     Verify Text            MARK TASK AS COMPLETED
     Click Text             MARK TASK AS COMPLETED
+    sleep                  2
     SwipeUp                2
     Verify Text            Sent to SAP
     #check the CDR number
