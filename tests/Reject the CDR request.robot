@@ -95,7 +95,7 @@ Creating And Verify to CDR request
     UseModal               On
     Click Text             CONFIRM                     recognition_mode=vision
     ScrollText             CDR process steps
-    SwipeUp                1
+    ScrollText             Country
     Verify Text            Sudan                       anchor=2
     Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,USD 8
     Verify Text            Closed - Rejected
@@ -105,4 +105,3 @@ Creating And Verify to CDR request
     GoTo                   ${CheckCDR}/${number}
 
 
-    
