@@ -36,6 +36,7 @@ Creating And Verify to CDR request
     Click Element          ${ProgrammeYear}
     Click Element          ${Year}
     Click Text             Next
+    #Store the CDR request Number in the Variable
     QVision.Verifytext     CDR
     ${var}                 QVision.Get Text            CDR with
     ${CDR}                 Evaluate                    $var.split(" ")[3]
@@ -83,31 +84,21 @@ Creating And Verify to CDR request
     Scroll Text            APPROVE
     Click Text             APPROVE
 
-    #Verify the Regional Head user should able to approve the CDR request
+    #Verify the Regional Head user should able to Rejected the CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
     Scroll Text            Assigned
-    Click Element          ${Approve}
-    # ClickText            Reject
+    #Click Element         ${Approve}
+    ClickText              Reject
     Type Text              Approver’s comment          ${comment}
     Type Text              Reason for delay if applicable                          ${Request_payment}
     Verify Text            MARK TASK AS COMPLETED
-    Click Text             MARK TASK AS COMPLETED
+    #Click Text            MARK TASK AS COMPLETED
     SwipeUp                2
-    Verify Text            Sent to SAP
+    Verify Text            Sudan                       anchor=2
+    Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,USD 8
+    Verify Text            Closed - Rejected
     #check the CDR number
     ${URL}                 GetUrl
     ${number}              Evaluate                    $URL.split("/")[6]
     GoTo                   ${CheckCDR}/${number}
-*** Test Cases ***
-Browser open     https://outlook.office.com                              chrome
-    Type Text              Email, phone, or Skype      ${username}
-    Click Text             Next
-    Type Secret            Enter password              ${password}
-    Click Text             Sign in
-    Click Text             Yes
-
-    # Wait for the inbox to load and open the email containing the authentication code
-    Verify Text            Inbox
-    TypeText               Search                      Testing Gavi
-    Click Text             Testing Gavi
