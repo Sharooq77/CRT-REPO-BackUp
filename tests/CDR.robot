@@ -81,7 +81,7 @@ Creating And Verify to CDR request
     Type Text              Enter a comment             ${comment}
     Scroll Text            APPROVE
     Click Text             APPROVE
-
+    sleep                  2
     #Verify the Regional Head user should able to approve the CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
