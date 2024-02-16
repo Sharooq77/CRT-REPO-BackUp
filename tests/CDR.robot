@@ -80,12 +80,13 @@ Creating And Verify to CDR request
     Scroll Text            1.2 Senior Country Manager                              anchor=Created on
     Type Text              Enter a comment             ${comment}
     Scroll Text            APPROVE
-    #Click Text             APPROVE
+    Click Text             APPROVE
     sleep                  2
     #Verify the Regional Head user should able to approve the CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
     Scroll Text            Assigned
+    VerifyText             Due date                                            anchor=Decision *      
     Click Element          ${Approve}
     # ClickText            Reject
     Type Text              Approver’s comment          ${comment}
@@ -99,3 +100,6 @@ Creating And Verify to CDR request
     ${URL}                 GetUrl
     ${number}              Evaluate                    $URL.split("/")[6]
     GoTo                   ${CheckCDR}/${number}
+
+
+ 
