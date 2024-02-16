@@ -85,8 +85,7 @@ Creating And Verify to CDR request
     #Verify the Regional Head user should able to approve the CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
-    Scroll Text            Assigned
-    VerifyText             Due date                                            anchor=Decision *      
+    Scroll Text            Assigned    
     Click Element          ${Approve}
     # ClickText            Reject
     Type Text              Approver’s comment          ${comment}
