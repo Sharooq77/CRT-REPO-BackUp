@@ -36,6 +36,7 @@ Creating And Verify to CDR request
     Click Element               ${Key}
     Click Element               ${ProgrammeYear}
     Click Element               ${Year}
+    ClickText                   Next
     Use Modal                   On
     ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
