@@ -88,12 +88,13 @@ Creating And Verify to CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
     Scroll Text            Assigned
-    #Click Element         ${Approve}
     ClickText              Reject
     Type Text              Approver’s comment          ${comment}
     Type Text              Reason for delay if applicable                          ${Request_payment}
     Verify Text            MARK TASK AS COMPLETED
     Click Text             MARK TASK AS COMPLETED
+    UseModal               On
+    Click Text             CONFIRM                  recognition_mode=vision
     SwipeUp                2
     Verify Text            Sudan                       anchor=2
     Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,USD 8
