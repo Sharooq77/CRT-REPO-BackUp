@@ -31,13 +31,11 @@ Creating And Verify to CDR request
     Click Element               ${Country}
     Click Text                  ${Name}
     Click Element               ${RecipientVendor}
-    Click Text                  ${Vender}
-    Sleep                       2
+    Click Element               ${Vendor}
     Click Element               ${BusinessKey}
-    Click Text                  ${Key}
-    ClickElement                ${ProgrammeYear}
-    Click Text                  ${Year}                     #
-    Click Text                  Next
+    Click Element               ${Key}
+    Click Element               ${ProgrammeYear}
+    Click Element               ${Year}
     Use Modal                   On
     ScrollText                  Created by                  T Mounika
     TypeText                    amountToDisburseInput       ${Amount}
