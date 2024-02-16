@@ -13,7 +13,7 @@ Creating And Verify to CDR request
     [Tags]                 Users
     Appstate               Home
 
-    Switch To Classic If Lightning                   # This line is commented out as it may not be needed in Lightning Experience
+    #Switch To Classic If Lightning                    # This line is commented out as it may not be needed in Lightning Experience
     Verify Text            Switch to Lightning Experience
     Click Item             All Tabs
     Click Text             Disbursements
@@ -59,7 +59,7 @@ Creating And Verify to CDR request
     #Enter the required text in the "Reason for requesting payment
     ScrollText             Amount to disburse for this request in USD*             recognition_mode=vision
     ScrollText             CANCEL                      recognition_mode=vision
-    SwipeDown
+    ClickElement           ${Reasonforrequestingpayment}
     Type Text              Reason for requesting payment                           ${Request_payment}
     Type Text              Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Click Text             START CDR                   anchor=as Draft
@@ -94,8 +94,9 @@ Creating And Verify to CDR request
     Verify Text            MARK TASK AS COMPLETED
     Click Text             MARK TASK AS COMPLETED
     UseModal               On
-    Click Text             CONFIRM                  recognition_mode=vision
-    SwipeUp                2
+    Click Text             CONFIRM                     recognition_mode=vision
+    ScrollText             CDR process steps
+    SwipeUp
     Verify Text            Sudan                       anchor=2
     Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,USD 8
     Verify Text            Closed - Rejected
@@ -103,3 +104,6 @@ Creating And Verify to CDR request
     ${URL}                 GetUrl
     ${number}              Evaluate                    $URL.split("/")[6]
     GoTo                   ${CheckCDR}/${number}
+
+
+    
