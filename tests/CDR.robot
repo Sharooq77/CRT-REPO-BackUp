@@ -98,15 +98,3 @@ Creating And Verify to CDR request
     ${URL}                 GetUrl
     ${number}              Evaluate                    $URL.split("/")[6]
     GoTo                   ${CheckCDR}/${number}
-*** Test Cases ***
-Browser open     https://outlook.office.com                              chrome
-    Type Text              Email, phone, or Skype      ${username}
-    Click Text             Next
-    Type Secret            Enter password              ${password}
-    Click Text             Sign in
-    Click Text             Yes
-
-    # Wait for the inbox to load and open the email containing the authentication code
-    Verify Text            Inbox
-    TypeText               Search                      Testing Gavi
-    Click Text             Testing Gavi
