@@ -12,7 +12,7 @@ Suite Teardown                  End suite
 *** Test Cases ***
 Creating And Verify to CDR request
     [Tags]                      Users
-    [Documentation]             4_Verify that system should not enable the "START CDR" button 
+    [Documentation]             Verify that system should not enable the "START CDR" button 
     ...                         if user is not selected the  mandatory field values
   
     Appstate                    Home
@@ -78,6 +78,5 @@ Creating And Verify to CDR request
     Click Text                  START CDR                   anchor=as Draft
     Waiting
     UseModal                    On
-
     # Click Text                START CDR                   recognition_mode=vision
     # Waiting
