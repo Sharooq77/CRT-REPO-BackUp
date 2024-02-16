@@ -58,7 +58,6 @@ Creating And Verify to CDR request
     Sleep                  2
     #Enter the required text in the "Reason for requesting payment
     ScrollText             Amount to disburse for this request in USD*             recognition_mode=vision
-    ScrollText             CANCEL                      recognition_mode=vision
     ClickElement           ${Reasonforrequestingpayment}
     Type Text              Reason for requesting payment                           ${Request_payment}
     Type Text              Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
