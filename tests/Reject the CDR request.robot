@@ -82,7 +82,7 @@ Creating And Verify to CDR request
     Type Text              Enter a comment             ${comment}
     Scroll Text            APPROVE
     Click Text             APPROVE
-
+    Sleep                  2
     #Verify the Regional Head user should able to Rejected the CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
@@ -94,6 +94,7 @@ Creating And Verify to CDR request
     Click Text             MARK TASK AS COMPLETED
     UseModal               On
     Click Text             CONFIRM                     recognition_mode=vision
+    sleep                  2
     ScrollText             CDR process steps
     ScrollText             Country
     Verify Text            Sudan                       anchor=2
