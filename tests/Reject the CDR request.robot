@@ -93,7 +93,7 @@ Creating And Verify to CDR request
     Type Text              Approver’s comment          ${comment}
     Type Text              Reason for delay if applicable                          ${Request_payment}
     Verify Text            MARK TASK AS COMPLETED
-    Click Text            MARK TASK AS COMPLETED
+    Click Text             MARK TASK AS COMPLETED
     SwipeUp                2
     Verify Text            Sudan                       anchor=2
     Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,USD 8
