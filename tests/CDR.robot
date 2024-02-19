@@ -86,7 +86,7 @@ Creating And Verify to CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
     Scroll Text            Assigned    
-    Click Element          ${Approve}
+    Click text              //div[contains(text(),'APPROVE')]
     # ClickText            Reject
     Type Text              Approver’s comment          ${comment}
     Type Text              Reason for delay if applicable                          ${Request_payment}
