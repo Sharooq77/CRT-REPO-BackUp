@@ -50,7 +50,7 @@ Creating And Verify to CDR request
     #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick         Home                        anchor=desktop
     QVision.DoubleClick         excution
-    QVision.DoubleClick         Gavi testcase
+    QVision.DoubleClick         CRT-REPO
     # QVision.DoubleClick         suite                       anchor=ui-recorder
     QVision.DoubleClick         files
     QVision.ClickText           FUNDAMENTALS .pdf
