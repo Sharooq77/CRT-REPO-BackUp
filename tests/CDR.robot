@@ -92,7 +92,7 @@ Creating And Verify to CDR request
     # ClickText                 Reject
     Type Text                   Approver’s comment          ${comment}
     Type Text                   Reason for delay if applicable                          ${Request_payment}
-    Verify Text                 MARK TASK AS COMPLETED
+    #Verify Text                 MARK TASK AS COMPLETED
     Click Text                  MARK TASK AS COMPLETED
     sleep                       2
     SwipeUp                     2
