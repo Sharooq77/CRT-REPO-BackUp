@@ -51,7 +51,7 @@ Creating And Verify to CDR request
     QVision.DoubleClick    Home                        anchor=desktop
     QVision.DoubleClick    excution
     QVision.DoubleClick    CRT-REPO
-    QVision.DoubleClick    suite                       anchor=ui-recorder
+    #QVision.DoubleClick    suite                       anchor=ui-recorder
     QVision.DoubleClick    files
     QVision.ClickText      FUNDAMENTALS .pdf
     QVision.ClickText      Open                        anchor=Cancel
