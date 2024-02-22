@@ -22,7 +22,7 @@ Creating And Verify to CDR request
     #open existing CDR Record
     Click Text             ${Disbursement_Number}
     Click Text             GO To CDR
-    Sleep                  2
+    Waiting
     Click Text             Dashboard
     Click Text             add
     Use Modal              On
@@ -56,14 +56,14 @@ Creating And Verify to CDR request
     QVision.ClickText      FUNDAMENTALS .pdf
     QVision.ClickText      Open                        anchor=Cancel
     Click Text             Upload
-    Sleep                  2
+    Waiting
     #Enter the required text in the "Reason for requesting payment
     ScrollText             Amount to disburse for this request in USD*             recognition_mode=vision
     ClickElement           ${Reasonforrequestingpayment}
     Type Text              Reason for requesting payment                           ${Request_payment}
     Type Text              Enter USD amount of COVID-related payment or enter 0    ${USD_Amount}
     Click Text             START CDR                   anchor=as Draft
-    Sleep                  2
+    Waiting
     UseModal               On
     Click Text             START CDR                   recognition_mode=vision
     Wait                   2
@@ -79,7 +79,7 @@ Creating And Verify to CDR request
     Type Text              Enter a comment             ${comment}
     Scroll Text            APPROVE
     Click Text             APPROVE
-    sleep                  2
+    Waiting
     #Verify the Regional Head user should able to approve the CDR request
     Scroll Text            Regional Head
     Click Text             2.1 Regional Head
@@ -89,7 +89,7 @@ Creating And Verify to CDR request
     Type Text              Reason for delay if applicable                          ${Request_payment}
     Verify Text            MARK TASK AS COMPLETED
     Click Text             MARK TASK AS COMPLETED
-    sleep                  2
+    Waiting
     SwipeUp                2
     Verify Text            Sent to SAP
     #check the CDR number
