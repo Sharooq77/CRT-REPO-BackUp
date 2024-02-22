@@ -10,7 +10,7 @@ Suite Teardown                  End suite
 
 *** Test Cases ***
 Creating And Verify to CDR request
-    [Tags]                      CDR
+    [Tags]                      CDR123
     Appstate                    Home
 
     #Switch To Classic If Lightning                          # This line is commented out as it may not be needed in Lightning Experience
