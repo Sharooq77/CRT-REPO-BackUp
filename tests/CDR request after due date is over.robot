@@ -69,10 +69,6 @@ Creating And Verify to CDR request
     ClickText              All request
     ClickText              My request
     Click Text             ${CDR}
-    # ClickText            My request
-    # ClickElement         ${Code}
-    # ClickElement         ${Code}
-    # ClickElement         xpath=/html[1]/body[1]/span[1]/app[1]/div[1]/md-content[1]/x-dashboard[1]/div[1]/div[1]/disbursement-table[1]/div[1]/md-table-container[1]/table[1]/tbody[1]/tr[1]/td[2]/a[1]
     Sleep                  2
     Verify Text            Sudan                       anchor=2
     Verify All             SDN-HSS-3-MOH,Government (MoH),Testing,USD 8
