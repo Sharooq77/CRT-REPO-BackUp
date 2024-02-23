@@ -49,7 +49,7 @@ Creating And Verify to CDR request
     Click Text             Select a file *
     #'Decision Letter'should be able to upload As a required document
     QVision.DoubleClick    Home                        anchor=desktop
-    QVision.DoubleClick    excution
+    QVision.DoubleClick    excution                        #run in dev mode use this steps
     QVision.DoubleClick    CRT-REPO
     #QVision.DoubleClick    suite                       anchor=ui-recorder
     QVision.DoubleClick    files
