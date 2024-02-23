@@ -14,7 +14,7 @@ Creating And Verify to CDR request
     [Tags]                      Button
     [Documentation]             system should not enable the "START CDR" button if user is not selected the mandatory field values
     Appstate                    Home
-    Switch To Classic If Lightning                          # This line is commented out as it may not be needed in Lightning Experience
+    #Switch To Classic If Lightning                          # This line is commented out as it may not be needed in Lightning Experience
     Verify Text                 Switch to Lightning Experience
     Click Item                  All Tabs
     Click Text                  Disbursements
