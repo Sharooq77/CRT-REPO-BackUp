@@ -14,7 +14,7 @@ Creating And Verify to CDR request
     Appstate                    home
     Switch To Classic If Lightning
     # ClickItem                   App Menu
-    ClickText                   All Tabs
+    # ClickText                   All Tabs
     # ClickText                   User User
     # ClickText                   Logout
     # ClickText                   T Mounika
