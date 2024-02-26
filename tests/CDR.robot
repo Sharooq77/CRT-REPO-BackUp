@@ -13,11 +13,11 @@ Creating And Verify to CDR request
     [Tags]                      CDR
     Appstate                    home
     Switch To Classic If Lightning
-    ClickItem                   App Menu
+    # ClickItem                   App Menu
     ClickText                   All Tabs
-    ClickText                   User User
-    ClickText                   Logout
-    ClickText                   T Mounika
+    # ClickText                   User User
+    # ClickText                   Logout
+    # ClickText                   T Mounika
     Click Item                  All Tabs
     Click Text                  Disbursements
     Drop Down                   View:                       All
