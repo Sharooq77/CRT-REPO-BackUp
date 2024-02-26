@@ -47,7 +47,7 @@ Switch To Classic If Lightning
     ${view_profile_visible}=    Run Keyword And Return Status    Click Text    text=View profile    timeout=2
     Run Keyword If    ${view_profile_visible}    Check And Switch To Classic
 
-*** Keywords ***
+
 Check And Switch To Classic
     ${is_lightning}=    Is Text    text=Switch to Salesforce Classic    timeout=2
     Run Keyword If    ${is_lightning}    Click Text    text=Switch to Salesforce Classic
