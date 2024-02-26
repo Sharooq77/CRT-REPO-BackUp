@@ -15,6 +15,9 @@ Creating And Verify to CDR request
     Switch To Classic If Lightning
     ClickItem                   App Menu
     ClickText                   All Tabs
+    ClickText                   User User
+    ClickText                   Logout
+    ClickText                   T Mounika
     Click Item                  All Tabs
     Click Text                  Disbursements
     Drop Down                   View:                       All
