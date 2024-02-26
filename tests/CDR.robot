@@ -11,11 +11,11 @@ Suite Teardown                  End suite
 *** Test Cases ***
 Creating And Verify to CDR request
     [Tags]                      CDR
-    Run Keyword                 Login
-    Switch To Classic If Lightning  
-    ClickItem                   App Menu                       
-    ClickText                  All Tabs
-    # Click Item                  All Tabs
+    Appstate                    home
+    Switch To Classic If Lightning
+    ClickItem                   App Menu
+    ClickText                   All Tabs
+    # Click Item                All Tabs
     Click Text                  Disbursements
     Drop Down                   View:                       All
     Click Text                  Go
