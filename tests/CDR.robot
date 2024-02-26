@@ -11,7 +11,7 @@ Suite Teardown                  End suite
 *** Test Cases ***
 Creating And Verify to CDR request
     [Tags]                      CDR
-    Appstate                    Home
+    Run Keyword                 Login
     Switch To Classic If Lightning  
     ClickItem                   App Menu                       
     ClickText                  All Tabs
