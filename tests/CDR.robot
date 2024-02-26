@@ -12,8 +12,9 @@ Suite Teardown                  End suite
 Creating And Verify to CDR request
     [Tags]                      CDR
     Appstate                    Home
-    Switch To Classic If Lightning                         
-    LaunchApp                   GAVI CRM
+    Switch To Classic If Lightning  
+    ClickItem                   App Menu                       
+    ClickText                   GAVI CRM
     Click Item                  All Tabs
     Click Text                  Disbursements
     Drop Down                   View:                       All
