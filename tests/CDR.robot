@@ -12,6 +12,7 @@ Suite Teardown             End suite
 Creating And Verify to CDR request
     [Tags]                 CDR123
     Appstate               Home
+    Waiting
     Switch To Classic If Lightning                   
     Verify Text            Switch to Lightning Experience
     Click Item             All Tabs
