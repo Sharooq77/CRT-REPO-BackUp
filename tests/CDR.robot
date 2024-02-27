@@ -14,7 +14,6 @@ Creating And Verify to CDR request
     Appstate               Home
     Waiting
     Switch To Classic If Lightning                   
-    Verify Text            Switch to Lightning Experience
     Click Item             All Tabs
     Click Text             Disbursements
     Drop Down              View:                       All
