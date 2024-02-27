@@ -13,8 +13,7 @@ Creating And Verify to CDR request
     [Tags]                 CDR123
     Appstate               Home
     Waiting
-    Switch To Classic If Lightning  
-    Check And Switch To Classic                 
+    Switch To Classic If Lightning                   
     Click Item             All Tabs
     Click Text             Disbursements
     Drop Down              View:                       All
