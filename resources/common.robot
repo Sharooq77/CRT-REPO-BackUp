@@ -44,7 +44,7 @@ Wait And Increase Sleep Time
     
 Switch To Classic If Lightning
     [Documentation]    Attempts to switch to Salesforce Classic if the current interface is Lightning.
-    ${view_profile_visible}=    Run Keyword And Return Status    Click Text    text=View profile    timeout=3
+    ${view_profile_visible}=    Run Keyword And Return Status    Click Text    View profile    timeout=2
     Run Keyword If    ${view_profile_visible}    Check And Switch To Classic
 
 Check And Switch To Classic
