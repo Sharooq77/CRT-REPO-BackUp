@@ -7,14 +7,19 @@ Suite Setup                Setup Browser
 Suite Teardown             End suite
 Library                    DateTime
     
-   
+*** Variables ***
+${selected_date}   
+${selected_time}
 
 
 
  *** Test Cases ***
 #Creating And Verify to CDR request
-       Get Time
-       Get current Date
+${Current_date}       Get Time
+${Currnt_time}       Get current Date
+   Run keyword if   ${selected_date}   < ${Current_date}  
+   
+   ...  Fail THe
 #     [Tags]                 Button
 #     [Documentation]        system should not enable the "START CDR" button if user is not selected the mandatory field values
 #     Appstate               Home
