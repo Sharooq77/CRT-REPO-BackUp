@@ -20,7 +20,14 @@ ${Currnt_time}       Get current Date
    Run keyword if   ${selected_time}   < ${Current_date}  
        get timeout  Fail THe
        Get Current Date
+       GetApiVersionUrl
+       GetInstanceUrl
+       GetConfig
        Get Time
+       LogPage
+       GetDropDownValues
+       GetAlertText
+       GetCurrentPosition
 #     [Tags]                 Button
 #     [Documentation]        system should not enable the "START CDR" button if user is not selected the mandatory field values
 #     Appstate               Home
