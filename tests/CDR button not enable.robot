@@ -1,16 +1,20 @@
-# *** Settings ***
-# Resource                   ../resources/common.robot
-# Resource                   ../resources/variable.robot
-# Library                    QVision
-# Library                    DataDriver                  reader_class=TestDataApi    name=Gaviupdate.xlsx
-# Suite Setup                Setup Browser
-# Suite Teardown             End suite
+*** Settings ***
+Resource                   ../resources/common.robot
+Resource                   ../resources/variable.robot
+Library                    QVision
+Library                    DataDriver                  reader_class=TestDataApi    name=Gaviupdate.xlsx
+Suite Setup                Setup Browser
+Suite Teardown             End suite
+Library                    DateTime
+    
+   
 
 
 
-
-# *** Test Cases ***
-# Creating And Verify to CDR request
+ *** Test Cases ***
+#Creating And Verify to CDR request
+       Get Time
+       Get current Date
 #     [Tags]                 Button
 #     [Documentation]        system should not enable the "START CDR" button if user is not selected the mandatory field values
 #     Appstate               Home
