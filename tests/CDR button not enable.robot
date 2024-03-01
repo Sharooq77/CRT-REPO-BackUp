@@ -9,7 +9,7 @@ Library                    DateTime
     
 *** Variables ***
 ${selected_date}   
-${selected_time}
+${selected_time}    2024-02-01
 
 
 
@@ -17,9 +17,10 @@ ${selected_time}
 #Creating And Verify to CDR request
 ${Current_date}       Get Time
 ${Currnt_time}       Get current Date
-   Run keyword if   ${selected_date}   < ${Current_date}  
-   
-   ...  Fail THe
+   Run keyword if   ${selected_time}   < ${Current_date}  
+       get timeout  Fail THe
+       Get Current Date
+       Get Time
 #     [Tags]                 Button
 #     [Documentation]        system should not enable the "START CDR" button if user is not selected the mandatory field values
 #     Appstate               Home
