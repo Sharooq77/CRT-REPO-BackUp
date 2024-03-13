@@ -1,13 +1,7 @@
 *** Settings ***
- 
-Documentation           New test suite
-Library                 QWeb
-Suite Setup             Open Browser    about:blank    chrome
-Suite Teardown          Close All Browsers
- 
- 
- 
+Library           QWeb
+
 *** Test Cases ***
-global
-   Log To Console   ${GlobalVar}
-has context menu
+Access Global Variable Example
+    [Documentation]    Demonstrates accessing a global variable set in another suite.
+    Log    ${GLOBAL_EXAMPLE}
