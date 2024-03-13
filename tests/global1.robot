@@ -1,9 +1,7 @@
 
 *** Settings ***
-Library            QWeb    
- 
+Library           QWeb
+
 *** Test Cases ***
 Set Global Variable Example
-    [Documentation]    This test case sets a global variable.
-    Set Global Variable    ${GlobalVar}    ExampleValue
-     
+    Set Global Variable    ${GLOBAL_EXAMPLE}    HelloWorld
