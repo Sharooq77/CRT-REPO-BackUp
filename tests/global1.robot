@@ -1,6 +1,6 @@
 
 *** Settings ***
- 
+Library            QWeb    
  
 *** Test Cases ***
 Set Global Variable Example
