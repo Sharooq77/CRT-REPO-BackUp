@@ -1,0 +1,7 @@
+*** Settings ***
+Library    QSapR3
+
+*** Test Cases ***
+Check QSapR3 Version
+    ${version}=    Evaluate    QSapR3.__version__
+    Log    QSapR3 version: ${version}
