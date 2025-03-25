@@ -1,7 +1,7 @@
 *** Settings ***
 Library        QForce
 Library        QWeb
-
+Suite Setup        OpenBrowser    about:blank   chrome
 
 *** Test Cases ***
 
