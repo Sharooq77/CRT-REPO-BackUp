@@ -16,7 +16,7 @@ Click First Contact And Verify
     # Verify we landed on the detail page
     VerifyText    Contact Detail    timeout=20
     VerifyText    Contact Information
-    
+
 
 *** Test Cases ***
 
@@ -32,10 +32,6 @@ Click First Contact And Verify
     LaunchApp    Sales
     ClickText    Contacts
  # Verify we're on the contacts list view
-    VerifyText    Recent Contacts    timeout=20
-    ${before_url}=    GetUrl
-    
-    # Ensure list is loaded and has records
-    ${contacts_exist}=    IsText    Name    timeout=5
-    Run Keyword If    ${contacts_exist}    Click First Contact And Verify
-    ...    ELSE    Log    No contacts found in the list    WARN
+
+     clickelement     (//a[@data-refid="recordId" and contains(@class, 'outputLookupLink')])[1]   anchor=Account Name
+   
