@@ -1,6 +1,7 @@
 *** Settings ***
 Library        QForce
 Library        QWeb
+Library    ../libraries/salesforce_dropdown_handler.py
 Suite Setup        OpenBrowser    about:blank   chrome
 
 
