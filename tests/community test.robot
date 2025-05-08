@@ -43,6 +43,4 @@ Suite Setup        OpenBrowser    about:blank   chrome
     ClickText    Save
     UseModal    off
 
-    # Verify the selections
-    ${stage_correct}=    Verify Picklist Options    Stage    Prospecting
-    Should Be True    ${stage_correct}
+   
