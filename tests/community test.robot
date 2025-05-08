@@ -13,7 +13,7 @@ Suite Setup        OpenBrowser    about:blank   chrome
 
     open browser         https://login.salesforce.com    chrome
     TypeText    Username    sharooq.a@cloudfulcrum.com.org
-    TypeSecret    Password    Crum@1234
+    TypeSecret    Password    Crum@123
     ClickText    Log In
     
     # Wait for and verify we're logged in by checking for Home tab
