@@ -20,10 +20,29 @@ Suite Setup        OpenBrowser    about:blank   chrome
     VerifyText    Home
     
     # Method 1: Using App Launcher
-    LaunchApp    Sales
-    ClickText    Contacts
- # Verify we're on the contacts list view
+   Launch App    Sales
+    ClickText    Opportunities
+    ClickText    New
+    UseModal    on
 
-     clickelement    xpath=(//a[@data-refid="recordId" and contains(@class, 'outputLookupLink')])[1]   anchor=Account Name
-   
-  
+    TypeText    Opportunity Name    Big Deal
+    Select Picklist Value    Stage    Prospecting
+    Select Picklist Value    Type    New Business
+
+    # Handle dependent picklists
+    Select Dependent Picklist Values    
+    ...    Product Family    Hardware
+    ...    Product    Laptop
+
+    # Multi-select products
+    Select Multiple Picklist Values    Additional Products    
+    ...    Monitor    
+    ...    Keyboard    
+    ...    Mouse
+
+    ClickText    Save
+    UseModal    off
+
+    # Verify the selections
+    ${stage_correct}=    Verify Picklist Options    Stage    Prospecting
+    Should Be True    ${stage_correct}
