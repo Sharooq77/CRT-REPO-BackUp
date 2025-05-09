@@ -27,7 +27,7 @@ Suite Setup        OpenBrowser    about:blank   chrome
 
     TypeText    Opportunity Name    Big Deal
     Select Picklist Value    Stage    Prospecting
-    Select Picklist Value    Type    New Business
+    Select Picklist Value    Type     New Customer 
 
     # Handle dependent picklists
     Select Dependent Picklist Values    
