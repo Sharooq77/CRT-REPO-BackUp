@@ -1,6 +1,7 @@
 *** Settings ***
 Library        QForce
 Library        QWeb
+Library        String
 Library    ../libraries/salesforce_dropdown_handler.py
 Suite Setup        OpenBrowser    about:blank   chrome
 
@@ -43,4 +44,10 @@ Suite Setup        OpenBrowser    about:blank   chrome
     ClickText    Save
     UseModal    off
 
-   
+    goto   https://www.rediff.com/
+   clickelement      xpath=//a[@title="Create Rediffmail Account"]
+   clickelement     xpath=//label[text()='Full Name']/following::input[1]
+   Typetext         Full Name         Testing
+   Evaluate           random.seed()    random
+   ${random_index}    Generate Random String    8    [LOWER][NUMBERS]
+   TypeText         Choose a Rediffmail ID            ${random_index}    
