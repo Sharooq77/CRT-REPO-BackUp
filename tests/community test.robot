@@ -2,7 +2,7 @@
 Library        QForce
 Library        QWeb
 Library        String
-Library    ../libraries/salesforce_dropdown_handler.py
+Library       ../libraries/salesforce_dropdown_handler.py
 Suite Setup        OpenBrowser    about:blank   chrome
 
 
@@ -21,28 +21,25 @@ Suite Setup        OpenBrowser    about:blank   chrome
     VerifyText    Home
     
     # Method 1: Using App Launcher
-   Launch App    Sales
-    ClickText    Opportunities
+  LaunchApp    Sales
+    ClickText    Accounts
     ClickText    New
-    UseModal    on
 
-    TypeText    Opportunity Name    Big Deal
-    Select Picklist Value    Stage    Prospecting
-    Select Picklist Value    Type     New Customer 
+    # Fill in the form using custom picklist
+    TypeText    Account Name    Test Account
+    Select From Custom Picklist    Type    Customer
+    Select From Custom Picklist    Industry    Technology
 
-    # Handle dependent picklists
-    Select Dependent Picklist Values    
-    ...    Product Family    Hardware
-    ...    Product    Laptop
+    # For searchable picklist
+    Select From Searchable Picklist    Rating    Hot
 
-    # Multi-select products
-    Select Multiple Picklist Values    Additional Products    
-    ...    Monitor    
-    ...    Keyboard    
-    ...    Mouse
+    ClickText    Save    partial_match=False
 
-    ClickText    Save
-    UseModal    off
+*** Keywords ***
+Verify Picklist Selection
+    [Arguments]    ${field}    ${expected_value}
+    VerifyText    ${expected_value}
+    VerifyField    ${field}    ${expected_value}
 
     goto   https://www.rediff.com/
    clickelement      xpath=//a[@title="Create Rediffmail Account"]
