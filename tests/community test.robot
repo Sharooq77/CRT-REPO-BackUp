@@ -21,7 +21,7 @@ Suite Setup        OpenBrowser    about:blank   chrome
     VerifyText    Home
     
     # Method 1: Using App Launcher
-  LaunchApp    Sales
+    LaunchApp    Sales
     ClickText    Accounts
     ClickText    New
 
