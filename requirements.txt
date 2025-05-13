@@ -1,0 +1,2 @@
+# Salesforce specific
+simple-salesforce
