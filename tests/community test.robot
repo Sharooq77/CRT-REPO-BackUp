@@ -11,15 +11,7 @@ Suite Setup    Open Browser    about:blank    chrome
 
 
 *** Test Cases ***
-    Test Picklist Selection With Logging
-    [Documentation]    Test picklist selection with detailed logging
-    ${status}=    Run Keyword And Return Status
-    ...    SFDropdown.Select From Custom Picklist    Type    Customer
-    Run Keyword If    not ${status}    Log    Selection failed    WARN
-
-    # Check logs
-    ${log_contents}=    Get File    automation.log
-    Log    ${log_contents}
+    
     open browser                https://login.salesforce.com                            chrome
     TypeText                    Username                    sharooq.a@cloudfulcrum.com.org
     TypeSecret                  Password                    Abbusharuk@123
@@ -35,7 +27,7 @@ Suite Setup    Open Browser    about:blank    chrome
 
     # Fill in the form using custom picklist
     TypeText                    Account Name                Test Account
-   SFDropdown.Select From Custom Picklist    Type    Customer
+   SFDropdown.Select From Custom Picklist    Type    Customer-Direct
     SFDropdown.Select From Custom Picklist    Industry    Technology
     SFDropdown.Select From Searchable Picklist    Rating    Hot
     ClickText    Save    partial_match=False
