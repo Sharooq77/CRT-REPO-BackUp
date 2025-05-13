@@ -1,21 +1,3 @@
-# Data processing
-pandas
-numpy
-
-# Web scraping and API interaction
-requests
-beautifulsoup4
-lxml
-
-# Robot Framework extensions
-robotframework-seleniumlibrary
-robotframework-databaselibrary
-robotframework-requests
-robotframework-jsonlibrary
-
-# Image processing (for QImage)
-pillow
-opencv-python
-
-# Salesforce specific
-simple-salesforce
+robotframework>=5.0
+robotframework-seleniumlibrary>=5.0
+QWeb
